@@ -17,7 +17,7 @@ Many years ago, I purchased a WeMo Smart Light Switch for the bedroom, which at 
 
 I would like to give a shout out to Yonatan's Dev Blog who provided the initial guidance I required to get this project rolling. You can read his guide on how he did a similar implementation in his own home [here](https://blog.yonatan.dev/controlling-ceiling-fan-home-assistant-433mhz-rf/).
 
-# The Hardware
+## The Hardware
 
 The first thing that needed to be identified was what frequency the fans operated on. While this can be checked with something like a Flipper Zero using the Frequency Analyzer, my remotes helpfully listed the frequency on a sticker inside the battery compartment.
 
@@ -48,7 +48,7 @@ _Note: + does not need to be connected_
 
 Now that the hardware was complete, it was time to move onto the software.
 
-# The Software
+## The Software
 
 While I initially attempted to go with MQTT like Yonatan's Dev Blog did, I found it quite cumbersome.
 
@@ -158,7 +158,7 @@ For each subsequent button, everything should be copied except for 'button:'. Ma
 
 Once all the changes have been made, they can be installed to the ESP32.
 
-## Adding to Home Assistant
+### Adding to Home Assistant
 
 Once the configuration is complete, the device can be added into Home Assistant.
 
@@ -178,7 +178,7 @@ _The controls that were configured should appear on this page_
 
 From here, they can be renamed (this only affects inside Home Assistant), icons can be changed and the controls can be added to a dashboard.
 
-## Voice Assistant Control
+### Voice Assistant Control
 
 While it is already very useful to be able to control the fans directly from Home Assistant through dashboards, many people (such as myself) want to also be able to control them using their voice.
 
@@ -212,7 +212,10 @@ switch:
 ```
 
 In the above example, the name can be whatever you want it to appear as by default in Home Assistant and Google Home/Amazon Alexa. Then, the {button_id} is the id that was set for the button you want to be pressed when the switch is toggled. Set both to the same button so whether it thinks the switch is on or off, it will do the same action.  Once this is done, connect the Matter Hub add-on to your smart home ecosystem, and command away! Future Improvements
-While my current implementation does work, I hope to create a PCB for the design to make it simpler and neater, and then also a case so that it can be a more permanent solution. Unfortunately the Arduino board I chose off AliExpress is not in the default KiCAD libraries, nor easily available online for import, so I will have to design my own components, which is well beyond the scope of this post. Conclusion
+While my current implementation does work, I hope to create a PCB for the design to make it simpler and neater, and then also a case so that it can be a more permanent solution. Unfortunately the Arduino board I chose off AliExpress is not in the default KiCAD libraries, nor easily available online for import, so I will have to design my own components, which is well beyond the scope of this post. 
+
+## Conclusion
+
 I have a couple other Smart Home projects in the works, so if you found this interesting please let me know in the comments!
 As always, if you liked this post, you can find similar content through the tags below or in the sidebar.
 Also, please consider donating via [GitHub Sponsors](https://github.com/sponsors/hasmar04) or [PayPal](https://paypal.me/harryasmar) so I can continue making content into the future.

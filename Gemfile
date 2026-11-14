@@ -4,6 +4,9 @@ source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 7.6"
 
+#allows links from old Blogger site to continue working
+gem 'jekyll-redirect-from'
+
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :windows, :jruby do

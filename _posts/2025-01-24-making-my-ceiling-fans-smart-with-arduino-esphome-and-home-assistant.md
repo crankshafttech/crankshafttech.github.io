@@ -80,7 +80,7 @@ Once the Serial port has been selected, the browser should show 'Connecting'. In
 
 In my case, after the install completed, ESPHome was unable to find the device on the network. To resolve this, I had to add a couple lines into the configuration file, which can be accessed by clicking 'Edit' on the device. In here, I had to add the following:
 
-```text
+```yaml
 wifi:
      ssid: !secret wifi_ssid
      password: !secret wifi_password
@@ -99,7 +99,7 @@ Note: ESPHome does not auto save! Make sure to click 'Save' before closing the c
 
 The first configurations that needed to be added were for the ['remote_receiver'](https://esphome.io/components/remote_receiver.html) and ['remote_transmitter'](https://esphome.io/components/remote_transmitter) components. If following the pinout provided earlier in this post, the following can be appended to the configuration file:
 
-```text
+```yaml
 remote_receiver:
      pin: GPIO4
      dump:
@@ -128,11 +128,11 @@ For each button that is pressed, at least one of the green lines in the above sc
 
 With this information at hand, the button can be appended to the configuration:
 
-```text
+```yaml
 button:
   - platform: template
-     name: XXXXXXXXXX
-    id: XXXXXXXXX
+      name: XXXXXXXXXX
+      id: XXXXXXXXX
 
 on_press:
       - remote_transmitter.transmit_XXXXXXXXXXX:
@@ -199,7 +199,7 @@ I will note that I have experienced some issues with this project, mostly due to
 #### UPDATE: The below workaround is no longer necessary in the latest version of Home Assistant Matter Hub, as it now supports automatically converting buttons to switches!
 
 One such issue I had was that it does not yet support buttons, which is what was used earlier for the control of the fans. To overcome this, I updated the fan_hub.yaml configuration in ESPHome to include switches, which do not show the correct state, and do the same thing whether they are turned on or off, but can behave just like a button via the Assistants:
-
+```yaml
 switch:
   - platform: template
     name: XXXXXXXXXXXXX
@@ -209,6 +209,8 @@ switch:
     turn_off_action:
       then:
         - button.press: {button_id}
+```
+
 In the above example, the name can be whatever you want it to appear as by default in Home Assistant and Google Home/Amazon Alexa. Then, the {button_id} is the id that was set for the button you want to be pressed when the switch is toggled. Set both to the same button so whether it thinks the switch is on or off, it will do the same action.  Once this is done, connect the Matter Hub add-on to your smart home ecosystem, and command away! Future Improvements
 While my current implementation does work, I hope to create a PCB for the design to make it simpler and neater, and then also a case so that it can be a more permanent solution. Unfortunately the Arduino board I chose off AliExpress is not in the default KiCAD libraries, nor easily available online for import, so I will have to design my own components, which is well beyond the scope of this post. Conclusion
 I have a couple other Smart Home projects in the works, so if you found this interesting please let me know in the comments!

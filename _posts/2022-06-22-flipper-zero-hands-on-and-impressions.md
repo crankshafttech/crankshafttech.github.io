@@ -17,15 +17,11 @@ Finally, in May 2022, I received my device. But was it worth the wait?
 
 _Flipper Zero in it's box, accompanied by a cute sticker!_
 
-## more
-
 ## What Does It Do?
 
 The Flipper Zero was promoted in the campaign as a "hackers multitool", allowing for the capture and retransmission of various signals and protocols. For instance, I've used mine to save TV and air conditioning infrared remotes, and my NFC ID cards. Various sub-GHz radio frequencies can even be saved, such as car keys, garage openers, and in my case, a light remote. Note that the available frequencies do depend on your region if using the official firmware.
 
 Some of the other awesome features include it being able to function as a U2F security key, a Bad USB with duckyscript support, and UART bridge from the GPIO to a PC.
-
-more
 
 ## Hardware
 
@@ -46,7 +42,7 @@ As for the visible hardware features of the device, there is a USB-C and wrist-s
 Inside, there are antennae for Bluetooth/Zigbee, Sub-GHz, 125 kHz RFID and NFC.
 Note that while Zigbee is supported by the device, it requires Bluetooth be disabled through a firmware flash, so both cannot be used simultaneously.
 
-## moreSoftware
+## Software
 
 While the firmware is far from complete, much of the core functionality is already available.
 
@@ -94,7 +90,7 @@ Finally, files can be shared via a special link, allowing files to easily be sha
 
 The app is available to download on both the [Google Play Store](https://play.google.com/store/apps/details?id=com.flipperdevices.app) and [Apple App Store](https://apps.apple.com/ec/app/flipper-mobile-app/id1534655259).
 
-## moreThe Future
+## The Future
 
 While the hardware is definitely complete, there are still many features of the firmware that were promised as part of the campaign but have not yet been implemented.
 
@@ -106,7 +102,7 @@ Another thing which was promised, and I believe is the most crucial missing feat
 
 Along with the things mentioned above, there are many features that people have been asking for, which were neither promised or implemented as of time of publishing. These include additions of extra radio protocols, such as to decrypt different types of garage openers and swipe cards. While it would be cool to see these implemented, it is probably not their highest priority, and the community is already helping them out.
 
-## moreConclusion
+## Conclusion
 
 In conclusion, the Flipper Zero was definitely worth the wait. Even though it took almost 2 years to arrive, it is just as awesome as I imagined, especially since there is nothing else like it.  It allows for so many IT tasks to be completed in a quicker, simpler way. And with the future addition of proper plugins, anything is possible. As new features and improvements are added, I hope to create more content on this amazing device in the future.
 
@@ -114,9 +110,7 @@ If you are interested in getting one for yourself, they will eventually be avail
 
 If you already have one for yourself, or are just interested in the software side of things, the firmware GitHub repository can be accessed [here](https://github.com/flipperdevices/flipperzero-firmware).
 
-more
-
-As always, if you liked this post, you can find all my other hands-on content [here](https://blog.crankshafttech.com/search/label/Hands-on), as well as through the tags below or in the sidebar.
+As always, if you liked this post, you can find all my other hands-on content [here](/tags/hands-on), as well as through the tags below or in the sidebar.
 Also, please consider donating via [GitHub Sponsors](https://github.com/sponsors/hasmar04) or [PayPal](https://paypal.me/harryasmar) so I can continue making content into the future.
 Finally, to get notified when new posts drop, sign up for email notifications in
 the sidebar, as well as follow @crankshafttech on [Facebook](https://www.facebook.com/crankshafttech/) and [Instagram](https://www.instagram.com/crankshafttech/).

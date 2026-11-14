@@ -18,7 +18,7 @@ While I had a few small things I disliked about the first iteration, I was overa
 
 Now that I have owned and worn both the Bangle.js 1 and 2 for a reasonable amount of time, I'm sharing my thoughts on what they do well, as well as what room there is for improvement.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEiZD58lrh-yyrGZEoNTBW0Ag6MPZTXl9G99TMbmr5W1opggRjZZA7VWM0urjvjnoVtKN-uHhpfX1DCWzA7MWWHQYt4azvhnnqJ9JUC1F3AW_MvkZ8A3sG6SPmhtNSeSKYDiGZ16pTr_2hUTcE6e2senNyQtw9oyZ2nXR-W-h4dN2_Qdie-fBrg1SbiK=s320)
+![](/assets/images/20211231_134657.heic)
 
 _Bangle.js 1 (Left) and Bangle.js 2 (Right)_
 
@@ -43,13 +43,13 @@ To see the list of available apps for these watches, visit the [App Loader](http
 
 The physical aspects of the Bangle.js 1 and 2 are really what set them apart. The most notable difference is the size and shape of the watches. While the Bangle.js 1 was round and quite large, the Bangle.js 2 is significantly smaller and also rocking a "squircle" face. I much prefer this new design, as it fits on my small wrist much better and isn't as heavy meaning I can actually forget the watch is there. 
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEg1MqS3ntcLa6Qds3z7VWi5j3r5ozkSMpaNV_tPH_TNbWTjuHhQOytCKU23-uzXzyFifaTicVeT3pBMJ2J_BMZcoTC4ceSYS4EqBhecHHv6huRZ6dDa5EzzVmDwPQYBI_yxoAmguuYK0c6R-OKStZtxg1yN8cLHucEGokojZJGVmVz9RKB0DFpkPbQr=s320)
+![](/assets/images/20211231_134739.heic)
 
 _Side Profile of Bangle.js 1 (Left) vs Bangle.js 2 (Right)_
 
 Another notable change, which I have already mentioned above, is the removal of the 3-button navigation in exchange for a touchscreen and a single side button design, comparable to the Amazfit Bip line of watches.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEhd8nYwTVtyMEAcgMdXf-8KhHFdyx9Nu7744kvIxSDHyxEVyaJA4B9BcAZaZKa16W4UaQhVaLpcE2WJxlFE4vtDiKy-wsIbzopjGuNrdTWppDjCmqnGjpSQ8puyUecSS1s2LpsT6dGy0X8pVA-h2UfwrzpeKLWmNkQkHhMnzVTp8XSaiilPFPlT1WYm=s320)
+![](/assets/images/20211231_134832.heic)
 
 _The Side Buttons on the Bangle.js 1 (Top) vs Bangle.js 2 (Bottom)_
 
@@ -60,6 +60,11 @@ Another change with the screen is that the Bangle.js 1 had a beautiful, bright a
 Although my experience may differ from the advertised time, this is due to how many apps I have installed as well as the amount of notifications I receive and how I have 24/7 heart rate enabled along with steps, all of which can significantly affect battery life. I have no doubt it is possible to reach the advertised time, it would just come with sacrifices.
 More information on battery life and power draw can be found [here](https://www.espruino.com/Bangle.js2#power-consumption).
 Other changes to the hardware include an improved heart rate sensor, a better charger with less chance of a short-circuit, a barometer under the strap mount and standard 20mm interchangeable bands. To see all of the specifications, check out the product page [here](https://www.espruino.com/Bangle.js2#features). 
-ConclusionOverall I think the Bangle.js 2 is a major upgrade over the Bangle.js 1 even with a few of the "downgrades", especially in regards to the screen, but with these being in exchange for a lighter, smaller design it's not really a downgrade, more just a design shift. For people with large wrists that want the brighter and higher resolution OLED as well as physical navigation buttons, the Bangle.js 1 is for them, while the Bangle.js 2 is for people who grieve their Pebble of yesteryear and don't want to sacrifice battery life and weight. For me personally, this will be staying on my wrist for the foreseeable future.
- If you are interested in getting one for yourself, sadly only the Bangle.js 1 is available to buy at the time of writing, with the Bangle.js only sent out to Kickstarter backers. To buy the original and eventually the Bangle.js 2, checkout the [Espruino Shop](https://shop.espruino.com) (not affiliated). 
- As always, if you liked this review, you can find more [here](https://blog.crankshafttech.com/search/label/Reviews), and also through the tags below or in the sidebar. If you have any feedback or things that I should include or remove in future reviews and showcases, please leave it in the comments below, and thanks again for reading!
+
+## Conclusion
+
+Overall I think the Bangle.js 2 is a major upgrade over the Bangle.js 1 even with a few of the "downgrades", especially in regards to the screen, but with these being in exchange for a lighter, smaller design it's not really a downgrade, more just a design shift. For people with large wrists that want the brighter and higher resolution OLED as well as physical navigation buttons, the Bangle.js 1 is for them, while the Bangle.js 2 is for people who grieve their Pebble of yesteryear and don't want to sacrifice battery life and weight. For me personally, this will be staying on my wrist for the foreseeable future.
+
+If you are interested in getting one for yourself, sadly only the Bangle.js 1 is available to buy at the time of writing, with the Bangle.js only sent out to Kickstarter backers. To buy the original and eventually the Bangle.js 2, checkout the [Espruino Shop](https://shop.espruino.com) (not affiliated). 
+
+As always, if you liked this review, you can find more [here](/tags/reviews/), and also through the tags below or in the sidebar. If you have any feedback or things that I should include or remove in future reviews and showcases, please leave it in the comments below, and thanks again for reading!

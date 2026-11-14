@@ -31,39 +31,20 @@ I also purchased an ESP32 Development Board, which will features USB-C for power
 
 Once these parts arrived, I wired them up in the following arrangement:
 
-ESP32
+|ESP32|Receiver|
+|---|---|
+|3V3|VCC|
+|DATA (Right)|D4 (GPIO4)|
+|GND|GND|
 
-			Receiver
+|ESP32|Receiver|
+|---|---|
+|D5 (GPIO5)|DATA|
+|GND| - |
 
-			ESP32
+_Note: + does not need to be connected_
 
-			Transmitter
-
-			3V3
-
-			VCC
-
-			D5 (GPIO5)
-
-			DATA
-
-			DATA (Right)
-
-			D4 (GPIO4)
-
-			GND
-
-			-
-
-			GND
-
-			GND
-
-Note: + does not need to be connected
-
-td p { orphans: 0; widows: 0; background: transparent }p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
-
-[![](/assets/images/20241229_144225~2.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWuIfdpKyuLSpCHaWXFnAXqKEdSPvGBm027AlZMAslJige6Aa-TGxGkOuabScoHQyLZ9PYOr2JTZym-tsP4ePIXbXw__Nj2QU9wvxMcmULVRQPLaiZVKOX8MrZ0Zogkxr7eKtBfoZ4nn2qI32qhiOME0QPtGQE0YSISvxFctwE3LWpjsHhqeCj4FPg09w/s2182/20241229_144225~2.jpg)
+![](/assets/images/20241229_144225~2.jpg)
 
 Now that the hardware was complete, it was time to move onto the software.
 
@@ -99,6 +80,7 @@ Once the Serial port has been selected, the browser should show 'Connecting'. In
 
 In my case, after the install completed, ESPHome was unable to find the device on the network. To resolve this, I had to add a couple lines into the configuration file, which can be accessed by clicking 'Edit' on the device. In here, I had to add the following:
 
+```text
 wifi:
      ssid: !secret wifi_ssid
      password: !secret wifi_password
@@ -107,6 +89,7 @@ wifi:
          static_ip: 192.168.XXX.XXX
          gateway: 192.168.XXX.XXX
          subnet: 255.255.255.0
+```
 
 Note that the above is only necessary if it does not automatically find your device. It also requires that you set this as a static lease on your router/DHCP server so that what you set in the configuration does not later become assigned to a different device.
 
@@ -116,6 +99,7 @@ Note: ESPHome does not auto save! Make sure to click 'Save' before closing the c
 
 The first configurations that needed to be added were for the ['remote_receiver'](https://esphome.io/components/remote_receiver.html) and ['remote_transmitter'](https://esphome.io/components/remote_transmitter) components. If following the pinout provided earlier in this post, the following can be appended to the configuration file:
 
+```text
 remote_receiver:
      pin: GPIO4
      dump:
@@ -128,6 +112,7 @@ remote_receiver:
 remote_transmitter:
      pin: GPIO5
      carrier_duty_percent: 100%
+```
 
 Further explanation of the above configuration can be found in the ESPHome documentation [here](https://esphome.io/guides/setting_up_rmt_devices#setting-up-rf-devices).
 
@@ -141,7 +126,10 @@ _The green text shows a radio signal being received by the ESP32_
 
 For each button that is pressed, at least one of the green lines in the above screenshot should appear. Note down the binary data, as well as the protocol number, as these will be required later. Also note if it says 'RCSwitch Raw' or some other code.
 
-With this information at hand, the button can be appended to the configuration:button:
+With this information at hand, the button can be appended to the configuration:
+
+```text
+button:
   - platform: template
      name: XXXXXXXXXX
     id: XXXXXXXXX
@@ -154,6 +142,7 @@ on_press:
             times: XX
             wait_time:
             microseconds: XXX
+```
 
 Firstly, the name is what the button will appear as in Home Assistant. Subsequently, the ID should be a lowercase, no spaces version of the name that can be used to reference this button from other things, such as switches.
 
@@ -225,6 +214,4 @@ While my current implementation does work, I hope to create a PCB for the design
 I have a couple other Smart Home projects in the works, so if you found this interesting please let me know in the comments!
 As always, if you liked this post, you can find similar content through the tags below or in the sidebar.
 Also, please consider donating via [GitHub Sponsors](https://github.com/sponsors/hasmar04) or [PayPal](https://paypal.me/harryasmar) so I can continue making content into the future.
-Finally, to get notified when new posts drop, sign up for email notifications in
-the sidebar, as well as follow @crankshafttech on [Facebook](https://www.facebook.com/crankshafttech/) and [Instagram](https://www.instagram.com/crankshafttech/). If
- you have any feedback or thoughts, please leave it in the comments below. Thanks again for reading!
+Finally, to get notified when new posts drop, sign up for email notifications in the sidebar, as well as follow @crankshafttech on [Facebook](https://www.facebook.com/crankshafttech/) and [Instagram](https://www.instagram.com/crankshafttech/). If you have any feedback or thoughts, please leave it in the comments below. Thanks again for reading!

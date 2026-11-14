@@ -66,14 +66,11 @@ As you may have noticed, all these models were printed on my filament-based Ende
 
 So while I plan to try this out with prints in the future, as of writing I had no projects pressing enough or the time to actually complete them with resin, although I do plan to do a follow-up in the future about my experiences with resin printing, and comparing it to filament-based printers. Hopefully in that post, I can shed some more light (pun intended) on how effective this design is.
 
-more
-
-As always, if you liked this post, you can find all my other 3D Printing content [here](https://blog.crankshafttech.com/search/label/3D Printing), as well as through the tags below or in the sidebar.
+As always, if you liked this post, you can find all my other 3D Printing content [here](/tags/3d-printing/), as well as through the tags below or in the sidebar.
 Also, please consider donating via [GitHub Sponsors](https://github.com/sponsors/hasmar04) or [PayPal](https://paypal.me/harryasmar) so I can continue making content into the future.
 Finally, to get notified when new posts drop, sign up for email notifications in
 the sidebar, as well as follow @crankshafttech on [Facebook](https://www.facebook.com/crankshafttech/) and [Instagram](https://www.instagram.com/crankshafttech/).
 
-If
- you have any feedback or thoughts, please leave it in the comments below.
+If you have any feedback or thoughts, please leave it in the comments below.
 
 Thanks again for reading!

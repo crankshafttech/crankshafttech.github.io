@@ -37,10 +37,8 @@ While this is definitely one of the simpler projects I have worked on, having it
 
 To make one for yourself, the model can be accessed at [Thangs](https://social.thangs.com/m/75397) and at [Printables](https://www.printables.com/model/218083-140mm-pc-fan-carbon-filter-fume-extractor).
 
-more
-
 While this was a little late, my June post will be out soon, reviewing the incredible Flipper Zero! To get notified when the post drops, sign up for email notifications in the sidebar, as well as follow the socials @crankshafttech on [Facebook](https://www.facebook.com/crankshafttech/) and [Instagram](https://www.instagram.com/crankshafttech/).
 
-As always, if you liked this post, you can find all my other 3D Printing content [here](https://blog.crankshafttech.com/search/label/3D%20Printing), and also through the tags below or in the sidebar. Also, please consider donating via [GitHub](https://github.com/sponsors/hasmar04) or [PayPal](https://paypal.me/harryasmar) so I can continue making content into the future.
+As always, if you liked this post, you can find all my other 3D Printing content [here](/tags/3d-printing/), and also through the tags below or in the sidebar. Also, please consider donating via [GitHub](https://github.com/sponsors/hasmar04) or [PayPal](https://paypal.me/harryasmar) so I can continue making content into the future.
 
 If you have any feedback or thoughts, please leave it in the comments below, and thanks again for reading!

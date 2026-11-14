@@ -45,5 +45,5 @@ So who is the Thumby for? It is for people who want to have a cool, working Game
 
 Starting at US$19 on their [Indiegogo Campaign](https://www.indiegogo.com/projects/thumby-the-tiny-playable-keychain#/), this is a must have for any tech enthusiast or gamer who wants a console on them everywhere they go, but also have a portable, easy-to-use development platform to fulfill their game design goals.
 
-As always, if you liked this review, you can find more [here](https://blog.crankshafttech.com/search/label/Reviews), and also through the tags below or in the sidebar.
+As always, if you liked this review, you can find more [here](/tags/reviews/), and also through the tags below or in the sidebar.
 If you have any feedback or things that I should change in future reviews and showcases, please leave it in the comments below, and thanks again for reading!

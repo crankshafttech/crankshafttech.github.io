@@ -37,10 +37,6 @@ The first thing to do once you purchase the dehydrator is test everything works,
 
 Now that it is confirmed working, the trays need to be removed. This will require only one tool, being the side-cutters, such as the ones that came with your printer.
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3dprintgeneral.com%2Fwp-content%2Fuploads%2F2017%2F05%2FScissors.jpg&f=1&nofb=1)
-
-_The typical side-cutters included with 3D Printers_
-
 Note that this can be a little messy, depending on how brittle the plastic is, so I recommend doing this in a place that can easily be cleaned or somewhere where mess doesn't matter.
 
 Finally, ***FOR SAFETY***, wear safety glasses to prevent plastic from entering and damaging your eyes, possibly permanently.
@@ -52,7 +48,7 @@ To make the filament rolls fit in the dehydrator, it is quite a simple process.
 1. Push the middle of the tray until it separates from the walls.
 1. Repeat for the remaining trays, although in my particular model the roll sat nice on the bottom tray, so I left that intact.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEglv5ozj-MyQNYvuvoU9-sILtorexufyy-YrtmrLAIyPrKNAWozzCCJhd-AXbD2578gYHHiSAMRolyjsmG0K7qIGnXsYSoMW6JDUdZJ7QncTNePI806W5DfuS73YDb-eTNLklqumhc1pKsPN38s3yfMxV2MM-1iCcKsFEIfI9sZNv9twGNN3vQlycrf=s320)
+![](/assets/images/20220128_150206.heic)
 
 _The dehydrator with most of the racks cut out_
 
@@ -92,6 +88,6 @@ Other than the Benchies, there isn't really much evidence against this method, a
 The main flaw with my experiment was that I did not have a working print to compare to with the same roll from before drying, so I may revisit this in the future when the problem arises again.
 But for now, I will continue to dry my filaments to ensure the flow rate is consistent and that there is no dilation of filament, but I would not consider it a must, at least for PLA.
 
-As always, if you liked this post, you can find all my other 3D Printing content [here](https://blog.crankshafttech.com/search/label/3D%20Printing), and also through the tags below or in the sidebar.
+As always, if you liked this post, you can find all my other 3D Printing content [here](/tags/3d-printing/), and also through the tags below or in the sidebar.
 
 If you have any feedback or thoughts, please leave it in the comments below,  and thanks again for reading!

@@ -14,17 +14,17 @@ I still remember the Christmas morning of 2017, when I opened the gift from my p
 
 _The Anet A8 after it's first power-on test._
 
-### Anet A8 First Impressions
+## Anet A8 First Impressions
 
 When I first assembled it, I had no idea how to use a 3D Printer, let alone how they work. But having such a bare-bones kit allowed for me to learn through using it all the tips and tricks from fixing the numerous issues to improving print quality. If I had gotten a Prusa i3 instead, I feel I would have missed out on much of the knowledge I gained.
 
-### What's Changed with Newer Printers?
+## What's Changed with Newer Printers?
 
 While most 3D Printers now have magnetic or glass beds, the A8 used painters tape, which was great when I was first learning and regularly did a terrible job at levelling the bed, but quickly became obsolete due to the rough texture it left on the bottom of prints. The amazing thing about this bed was that it was heated, which was not a feature all printers possessed at the time. This allowed for much better prints as bed adhesion could be greatly improved without using large brims and glue sticks.
 
 While this was all great, the main improvements that newer printers now feature are greatly improved safety. The Anet A8 was notorious for setting itself alight, be it from the horrible hotbed connector that would break off and short, or the power supply that I personally had to replace after it started sparking. The stories I heard about this printer have still made me paranoid to this day about having my Ender 5 print overnight or when I'm not at home, which makes long prints impossible.
 
-### Enter the Ender 3 & 5
+## Enter the Ender 3 & 5
 
 Towards the end of 2019 and into 2020, the Ender 5 and it's smaller sibling the Ender 3 were the new recommendations over the Anet A8, with the Ender 3 becoming the new most popular printer. The key improvements with these printers were all metal frames, which the A8's acrylic frame could not compete with, as well as increased reliability and print quality. While the Ender 3 is a direct competitor to the A8 with it's "T" shape, the Ender 5 is a "Box" printer with a square frame, which adds further rigidity, but also bulk. Comparing the Print QualityAround Easter in 2018, 4 months after I first assembled the A8, I downloaded [Easter Egg models off Thingiverse](https://www.thingiverse.com/thing:2829553) and printed one of them to celebrate the event. Now, 4 years later, I sliced the same file for the Ender 5 and printed it again to compare the quality. 
 
@@ -40,5 +40,8 @@ A Final Easter TreatSince I had the printer already running, I decided to print 
 
 _Normal Supports (Left) vs Tree Supports (Right)_
 
-First up, the normal supports was printed using the touching buildplate setting to make it more comparable to tree supports. The print took 5hrs, 49mins and 27secs. Shortly into the print, the support for the hand collapsed, meaning the bottom of the left hand did not complete, although thankfully the print saved itself and completed everything else successfully. Next up, the tree supports model took 6hrs, 30mins and 32secs, which is ~40mins longer than the normal supports, probably due to it using slightly more travel. The benefit of tree supports was on full show, with the model using less material but also supporting the entire overhang instead of just the part that's directly over the bed, as the "branches" bend and insert themselves between the gaps in the model, as well as wrap themselves around the model for minimum filament use. They are also hollow, meaning they are super easy to remove and, once again, use less material than the solid normal supports. In regards to removing the supports, both took a similar amount of time to remove, with most of the time spent removing the internal supports, as they were both quite secured to the inside of the head, which was too deep for the side-cutters. Conclusion
-As always, if you liked this post, you can find all my other 3D Printing content [here](https://blog.crankshafttech.com/search/label/3D%20Printing), and also through the tags below or in the sidebar. If you have any feedback or thoughts, please leave it in the comments below, and thanks again for reading!
+First up, the normal supports was printed using the touching buildplate setting to make it more comparable to tree supports. The print took 5hrs, 49mins and 27secs. Shortly into the print, the support for the hand collapsed, meaning the bottom of the left hand did not complete, although thankfully the print saved itself and completed everything else successfully. Next up, the tree supports model took 6hrs, 30mins and 32secs, which is ~40mins longer than the normal supports, probably due to it using slightly more travel. The benefit of tree supports was on full show, with the model using less material but also supporting the entire overhang instead of just the part that's directly over the bed, as the "branches" bend and insert themselves between the gaps in the model, as well as wrap themselves around the model for minimum filament use. They are also hollow, meaning they are super easy to remove and, once again, use less material than the solid normal supports. In regards to removing the supports, both took a similar amount of time to remove, with most of the time spent removing the internal supports, as they were both quite secured to the inside of the head, which was too deep for the side-cutters. 
+
+## Conclusion
+
+As always, if you liked this post, you can find all my other 3D Printing content [here](/tags/3d-printing/), and also through the tags below or in the sidebar. If you have any feedback or thoughts, please leave it in the comments below, and thanks again for reading!

@@ -14,7 +14,6 @@ I placed my Kickstarter pledge for the Flipper Zero all the way back in August 2
 Finally, in May 2022, I received my device. But was it worth the wait?
 
 ![](/assets/images/20220531_163241.heic)
-
 _Flipper Zero in it's box, accompanied by a cute sticker!_
 
 ## What Does It Do?
@@ -30,7 +29,6 @@ Since the hardware is the only part of the device that I would consider final, I
 The device is surprisingly heavy for it's size, due to the number of components crammed inside. It is also quite thick, which is actually nice, as it allows for the device to be grasped easier within the hand.
 
 ![](/assets/images/20220531_163431.heic)
-
 _Flipper Zero without it's protective case._
 
 The case is plastic, the buttons are also plastic and the screen is acrylic. While this does make sense for the price and the type of device, it does mean the screen scratches easily, so don't put it in your pocket with your keys. I hope screen protectors become available at some point, but as of writing you need to cut your own.
@@ -61,7 +59,6 @@ allow for simple authentication and access to buildings and systems.
 Right above the iButton pins, the Infrared blaster/receiver can be found. This is what is used for saving and re-transmitting buttons from remotes for all sorts of devices, from TV remotes to air-conditioning units. It is also used for the universal remote functionality, which sprays numerous different codes, one after the other, until the target device receives a code it understands. Currently this is only available for TVs, but in future has the ability to support many more device types.
 
 ![](/assets/images/universal_remote_ir.png)
-
 _The Universal Remote interface, which makes use of screen rotation._
 
 In terms of firmware updates, currently custom firmwares (which there are already many of) can only be flashed through qFlipper on the desktop and not the mobile app, although this should be something that is improved upon in the future.
@@ -69,19 +66,16 @@ In terms of firmware updates, currently custom firmwares (which there are alread
 Speaking of qFlipper, this simple tool allows for the installation of firmware, as well as managing files on the devices storage, including the SD card.
 
 ![](/assets/images/qFlipper.png)
-
 _The qFlipper interface._
 
 The other awesome feature it includes is being able to stream the screen and control the device from the program, allowing for easy screenshot capture through the built-in button.
 
 ![](/assets/images/qFlipper_capture.png)
-
 _The qFlipper remote control interface._
 
 Sadly, the mobile app is missing many of these features. For instance, it is possible to upload files onto the flipper, but there is no ability to create new files or delete files that are not identified as being for one of the functions. For instance, some configuration files for custom firmwares.
 
 ![](/assets/images/Screenshot_20220622-165219_Flipper.jpg)
-
 _The Flipper Zero mobile app on Android._
 
 While the app is missing many features, it also has a few that are unique. For instance, keys can be deleted and restored through the Archive tab, and favourites can be assigned, which also show up on the Flipper desktop.

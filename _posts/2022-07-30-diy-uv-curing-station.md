@@ -23,7 +23,6 @@ Since these torches are essentially free, and in huge supply, I chose to build a
 Firstly, I started brainstorming different ways to make the torches stay in place in the most simple way possible. I ended up using a combination of a small shelf, as well as a hole through the model with a little lip to prevent it falling out the end to hold the torches in place.
 
 ![](/assets/images/shelf_hole.png)
-
 _The small shelf with the lip to prevent the torch falling out._
 
 While making the shelves, I first tried to model them manually, which ended with a very poor, hard to replicate or re-dimension design. Because of this, I stumbled across the 'arc slot' shape under the draw menu, which allowed for the perfect shape for the shelf, all with easy to assign dimensions that aligned perfectly with the hole.
@@ -33,7 +32,6 @@ The hardest part to get right, which still has issues, was the base. Since the t
 The first design I tried was a solid rectangular base, which was simple to model and would serve a solid starting point.
 
 ![](/assets/images/20220723_181010.heic)
-
 _The first iteration of the stand._
 
 I quickly realised that the base was not large enough, and when loaded up with torches could not stand up correctly.
@@ -45,19 +43,16 @@ My next attempt at fixing the leg issue was also an attempt at saving time and f
 After printing this second iteration, I found that the holes were not the correct size, but it still did not stand up on it's own when all the torches were inserted.
 
 ![](/assets/images/20220723_181027.heic)
-
 _The second iteration of the stand._
 
 Although it could not stand by itself, I soon realised I could use both of the stands in combination to support the two ends of the torch, which worked wonderfully.
 
 ![](/assets/images/20220723_180945.heic)
-
 _The two stands used together to hold all the torches._
 
 Now that the stand was mostly complete, I began to consider how to rotate the models so the light reaches all sides. Looking at how the proper stations achieved this, I ordered a solar turntable that can both be powered by batteries as well as the UV lights themselves. This works great, as I don't need to keep removing the battery when it is not in use.
 
 ![](/assets/images/20220816_165630.jpg)
-
 _The solar turntable._
 
 This also provided a potential solution to the torch issue, where the base can be held in place by the turntable and it's weight, especially when using batteries. The only issue with this method is that all the previous designs had been designed so they could be printed face down without supports, although having parts jutting out both sides means that it needs to be printed vertically with supports for all the shelves, increasing filament waste and also print time. It also has the potential to weaken the model, as the adhesion between the layers is aligned with the force from the weight of the torches, meaning it could just snap, although I can only speculate as I have not tried printing this way as of writing.

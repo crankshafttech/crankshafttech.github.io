@@ -22,7 +22,6 @@ I would like to give a shout out to Yonatan's Dev Blog who provided the initial 
 The first thing that needed to be identified was what frequency the fans operated on. While this can be checked with something like a Flipper Zero using the Frequency Analyzer, my remotes helpfully listed the frequency on a sticker inside the battery compartment.
 
 ![](/assets/images/20241231_105241~2.jpg)
-
 _This certainly made my life a lot easier_
 
 Now that I had confirmed that my remote operated on 433Mhz (The decimal places are not a concern), I purchased some transmitter and receiver modules off AliExpress. The exact modules I purchased can be found [here](https://vi.aliexpress.com/item/1005004187087255.html), but I recommend shopping around to see if there is a better deal.
@@ -61,7 +60,6 @@ From within Home Assistant, I installed the [ESPHome Device Builder Add-on](http
 Once it is installed, it can be accessed from the Home Assistant sidebar.
 
 ![](/assets/images/esphome.png)
-
 _While it looks simple, ESPHome is very powerful_
 
 **Please note** that the next few steps require the use of a browser that supports WebSerial, which at the time of publishing is any Chromium-based browser, such as Google Chrome or Microsoft Edge. Hopefully Firefox adds support in the future.
@@ -73,7 +71,6 @@ Next, click on 'New Device' in ESPHome Device Builder and set a name for your de
 On the next screen, it will ask to connect to the ESP32. Click 'Connect' and follow the prompts from your browser to find your device.
 
 ![](/assets/images/esphome_connect.png)
-
 _At this point, the ESP32 is connected to the ESPHome Builder_
 
 Once the Serial port has been selected, the browser should show 'Connecting'. In my case, I had to hold the 'BOOT' button on the ESP32 board to get it to successfully start configuring. Once it shows 'Preparing installation', give it a few minutes as it creates all the necessary files. Eventually, it should change to 'Installing' which is when it is flashed to the ESP32 board.
@@ -121,7 +118,6 @@ After the above configuration is entered, click 'Install' in the top right to se
 Now when a button is pressed on the remote to be replicated, it should appear in the log output in ESPHome.
 
 ![](/assets/images/esphome-receive-log.png)
-
 _The green text shows a radio signal being received by the ESP32_
 
 For each button that is pressed, at least one of the green lines in the above screenshot should appear. Note down the binary data, as well as the protocol number, as these will be required later. Also note if it says 'RCSwitch Raw' or some other code.
@@ -167,13 +163,11 @@ Firstly, make sure you know the hostname or IP Address for the ESP32.
 Next, go to Settings -> Devices & services in Home Assistant, and click on 'Add Integration'. Search for 'ESPHome', and select it. Enter the hostname or IP Address from the ESP32 and click 'Submit'. Once successful, add it to a room and click 'Finish'.
 
 ![](/assets/images/esp32-add.png)
-
 _The Fan Hub successfully added into Home Assistant_
 
 Once added, click on ESPHome, then the device. Some device info should be shown, along with the buttons that have been configured.
 
 ![](/assets/images/esp32-controls.png)
-
 _The controls that were configured should appear on this page_
 
 From here, they can be renamed (this only affects inside Home Assistant), icons can be changed and the controls can be added to a dashboard.

@@ -11,7 +11,6 @@ redirect_from:
 I still remember the Christmas morning of 2017, when I opened the gift from my parents to find an Anet A8 3D Printer kit. Before this moment, I never even considered being able to afford this futuristic technology, let alone actually owning one. But my parents knew my love for technology well, and timed this gift just perfectly with the rapid growth in the 3D Printing space.
 
 ![](/assets/images/IMG_20171228_075705_819.jpg)
-
 _The Anet A8 after it's first power-on test._
 
 ## Anet A8 First Impressions
@@ -29,7 +28,6 @@ While this was all great, the main improvements that newer printers now feature 
 Towards the end of 2019 and into 2020, the Ender 5 and it's smaller sibling the Ender 3 were the new recommendations over the Anet A8, with the Ender 3 becoming the new most popular printer. The key improvements with these printers were all metal frames, which the A8's acrylic frame could not compete with, as well as increased reliability and print quality. While the Ender 3 is a direct competitor to the A8 with it's "T" shape, the Ender 5 is a "Box" printer with a square frame, which adds further rigidity, but also bulk. Comparing the Print QualityAround Easter in 2018, 4 months after I first assembled the A8, I downloaded [Easter Egg models off Thingiverse](https://www.thingiverse.com/thing:2829553) and printed one of them to celebrate the event. Now, 4 years later, I sliced the same file for the Ender 5 and printed it again to compare the quality. 
 
 ![](/assets/images/20220411_115406.heic)
-
 _Ender 5 (Left), and Anet A8 (Right)_
 
 Sadly, the Anet A8 version was scaled at the time, and as it has been significantly upgraded and then decommissioned, I am unable to create a full size version. Although, in light of this, the main issue with the Anet A8 can still be seen, being the lacking in resolution. Firstly, the A8 used a 0.4mm nozzle compared the to 0.2mm on the Ender 5, but this is not the main culprit. The acrylic frame of the A8 allowed for the nozzle to flex it during fast movements, leading to the "fuzzy" effect that can be seen. As the Ender 5 has a metal frame, this is absent on it's model.
@@ -37,7 +35,6 @@ Secondly, the Anet A8 featured a direct-drive extruder, which means the extruder
 A Final Easter TreatSince I had the printer already running, I decided to print a set of rabbits to test the overhangs, but also to celebrate the holiday. Making use of the awesome translucent green PLA I bought, I was able to print 2 rabbits with one using the normal Cura supports, and the other tree supports.
 
 ![](/assets/images/20220418_092114.heic)
-
 _Normal Supports (Left) vs Tree Supports (Right)_
 
 First up, the normal supports was printed using the touching buildplate setting to make it more comparable to tree supports. The print took 5hrs, 49mins and 27secs. Shortly into the print, the support for the hand collapsed, meaning the bottom of the left hand did not complete, although thankfully the print saved itself and completed everything else successfully. Next up, the tree supports model took 6hrs, 30mins and 32secs, which is ~40mins longer than the normal supports, probably due to it using slightly more travel. The benefit of tree supports was on full show, with the model using less material but also supporting the entire overhang instead of just the part that's directly over the bed, as the "branches" bend and insert themselves between the gaps in the model, as well as wrap themselves around the model for minimum filament use. They are also hollow, meaning they are super easy to remove and, once again, use less material than the solid normal supports. In regards to removing the supports, both took a similar amount of time to remove, with most of the time spent removing the internal supports, as they were both quite secured to the inside of the head, which was too deep for the side-cutters. 

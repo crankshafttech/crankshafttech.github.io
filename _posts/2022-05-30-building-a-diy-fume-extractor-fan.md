@@ -17,7 +17,6 @@ The goal of this project was simple. Design a simple holder for a carbon filter 
 I started by investigating what was already available on the market, only to find that all the options were quite expensive, at over AU$50, but not of the quality I would accept for that price.
 
 ![](/assets/images/fume_extractor_jaycar.jpg)
-
 _A fume extractor that costs AU$75_
 
 From these findings, I set out to make my own version, and while I have not fully completed this model, I have made the most key part to get a prototype working.
@@ -27,7 +26,6 @@ The design consists of 2 parts: the main assembly, and the lid/mount combo. The 
 Factoring in that a cheap 140mm fan can be bought off eBay for AU$12 and a few dollars in time and materials for the 3D-Printed components, this design comes in significantly cheaper than a store-bought alternative.
 
 ![](/assets/images/20220601_141612.jpg)
-
 _The main assembly with a fan and filter installed_
 
 The final part that I am yet to design is the lid/mount, which will lock all the components inside so they cannot fall out, as well as allow the model to be attached to a stand or arm for optimal positioning through the planned use of a threaded insert, which I hope to attempt installing using the soldering-iron method, which melts it into place.

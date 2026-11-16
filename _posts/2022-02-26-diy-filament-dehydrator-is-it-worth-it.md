@@ -30,7 +30,6 @@ The one I decided upon was the [$45 Anko Food Dehydrator from Kmart (Australia)]
 One other thing to check is that your spools will fit, although if there are trays in the way like there was for me, they can be easily removed.
 
 ![](/assets/images/dehydrator.png)
-
 _The dehydrator used in this post_
 
 The first thing to do once you purchase the dehydrator is test everything works, because after it is modified it will not be possible to return it.
@@ -48,8 +47,7 @@ To make the filament rolls fit in the dehydrator, it is quite a simple process.
 1. Push the middle of the tray until it separates from the walls.
 1. Repeat for the remaining trays, although in my particular model the roll sat nice on the bottom tray, so I left that intact.
 
-![](/assets/images/20220128_150206.heic)
-
+![](/assets/images/20220128_150206.heic){: width="400" height="300" }
 _The dehydrator with most of the racks cut out_
 
 Now that the modifications are complete, it is time to get drying!
@@ -69,14 +67,12 @@ The prints were completed on an Ender 5 with a BL-Touch, with everything else st
 
 The models used were the ["Cute Mini Octopus"](https://www.mcgybeer.xyz/main/cute-mini-octopus) and the [3DBenchie](https://www.thingiverse.com/thing:763622). Once I successfully got one material to print, I used the exact same settings and gcode to print the next one.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEhhs2K0qVYwIHjx5FB8g_PB4WhKORtzuM8M9_28bIF6o0dvzrN9AJL4_7cQCMBfy6BARaG1ja2GjLzAnys-Ln7sveuALLVoifb7GSD18z_UBzbcJ46Zof4YPDYyMNxeUdQnkPyFwaRsrhmrxfnxy6RebdDxD5VtK69EcX7X7L6kIWKdJscBkT5n3SgW=w300-h400)
-
+![](assets/images/20220203_135149.heic){: width="400" height="300" }
 _Black and Green Octopi_
 
 Both turned out great once all the settings were dialled in, but the black dried filament had slightly less stringing, which is commonly attributed to moisture. Also, no popping was noticeable which means there was no evaporating moisture affecting the flow rate. Both prints were smooth and did not have any obvious under-extrusion or flow issues.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEgtzzMoN8BP7cd7E-tYt5ZV1GLyqvHBbHm3UvL4-k2tQPA9bMMrT4lhZZy3r3KIJ6PxNKu1cxbxO2JkYybbVftir-AHPM6amonkcxbKE1LC4Le5PJtn42xxjNAwX8Cf42jifWM-HNheDePZXsnLg0CY41qvGaYN3mOxa0GNhtF-VcXEBO6STXovoU9W=s320)
-
+![](assets/images/20220220_151408.heic){: width="400" height="300" }
 _Black and Green Benchies_
 
 Interestingly, with the 3DBenchie, there was more noticeable stringing on the black than the green, but otherwise they both turned out great. They both completed and all features were present.

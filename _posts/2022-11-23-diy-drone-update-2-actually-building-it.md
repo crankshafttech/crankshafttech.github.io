@@ -15,7 +15,6 @@ This project has been a long time in the making. My [first post about this drone
 Stepping back to 2021, I still had not replaced the broken motor, so I ordered one of eBay, which this time came with all the accessories. I guess you get what you pay for. I also ordered a proper 12V power supply for the battery charger, not because the DIY version was dangerous or failed, but because it used more space than necessary, and was probably not that efficient. Maybe I'll build one of those custom desktop power supplies out of it one day.
 
 ![](/assets/images/20211127_115457_cropped.jpg)
-
 _The First-Person View (FPV) module connected to the Flight Controller_
 
 I started by connecting up the FPV module to the Flight Controller,
@@ -30,7 +29,6 @@ At this point I met up with some friends who had slightly more experience with R
 Now that all the simple (and in the case of the transceiver, essential) components were connected, I began to connect all the motors. Firstly, the motors were connected to each of the 4 Electronic Speed Controllers (ESCs), which control the amount of current going to the motors, and allow for the drone to know what speed the motors are rotating at. These ESCs also have extra connectivity, allowing for their [BLHeli](https://github.com/bitdump/BLHeli) firmware to be updated, but also configured beyond that of pure Betaflight.
 
 ![](/assets/images/20211127_115500.jpg)
-
 _The (amazing) workspace much of the drone was built in_
 
 The flight controller I used only had one pad for soldering all the live and ground wires from the motors to, so I purchased a distribution board which had pads for each of the 4 ESC's power cables, as well as the battery and the power for the Flight Controller. The rest of the wires were soldered directly to the FC, which facilitate the control of each of the individual motors.
@@ -42,7 +40,6 @@ Once it was all within the frame, I did a quick test of each motor through Betaf
 Eventually, once everything seemed like it was working correctly, including the safety switch on the controller, I attached the props and took it outside to test if it would fly. And it did! Although I am not very good at flying it, especially landing... It's still in one piece, but I have a lot of practice to do in the simulator before flying it properly.
 
 ![](/assets/images/20221123_153339.jpg)
-
 _The completed drone (minus battery)_
 
 So now it is complete and works, I hope to fly it soon once I've spent some more time in the simulator. I also have an RC plane now, which I also cannot fly well, so there may be more aerospace related content in the future if either of those get off the ground (pun intended).

@@ -19,7 +19,6 @@ While I had a few small things I disliked about the first iteration, I was overa
 Now that I have owned and worn both the Bangle.js 1 and 2 for a reasonable amount of time, I'm sharing my thoughts on what they do well, as well as what room there is for improvement.
 
 ![](/assets/images/20211231_134657.heic)
-
 _Bangle.js 1 (Left) and Bangle.js 2 (Right)_
 
 ## Software
@@ -44,13 +43,11 @@ To see the list of available apps for these watches, visit the [App Loader](http
 The physical aspects of the Bangle.js 1 and 2 are really what set them apart. The most notable difference is the size and shape of the watches. While the Bangle.js 1 was round and quite large, the Bangle.js 2 is significantly smaller and also rocking a "squircle" face. I much prefer this new design, as it fits on my small wrist much better and isn't as heavy meaning I can actually forget the watch is there. 
 
 ![](/assets/images/20211231_134739.heic)
-
 _Side Profile of Bangle.js 1 (Left) vs Bangle.js 2 (Right)_
 
 Another notable change, which I have already mentioned above, is the removal of the 3-button navigation in exchange for a touchscreen and a single side button design, comparable to the Amazfit Bip line of watches.
 
 ![](/assets/images/20211231_134832.heic)
-
 _The Side Buttons on the Bangle.js 1 (Top) vs Bangle.js 2 (Bottom)_
 
 This change is a bit more controversial as a touchscreen is much less accurate and reliable than physical buttons, while on the other hand the touchscreen allows for more interaction styles not possible with buttons, such as interacting with a specific icon on the screen without "scrolling" through them to select the correct one.

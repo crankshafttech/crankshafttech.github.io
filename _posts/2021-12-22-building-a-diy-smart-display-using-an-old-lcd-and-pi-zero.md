@@ -13,16 +13,14 @@ redirect_from:
 
 It's been a while since I last wrote for this blog, let alone about a project, but over the past few months I have worked on multiple different projects that I hope to share on here over the next few weeks and months.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEg0HSinb0v9kNpaNTQcbdBOaZkQDDk772Z0pvegIYvrDmjP5lDeYDaXRMPpR1lB6osLOx4fOWEAsX_D0ALaHN_YzwaVLQihLCDnDZdpb3JDD6FIFIbKz_PJrtWULjRI8PpfNaiobLWrU_C_s0YPtISjHMJ7ti8zto_3jjs8_MG95tkSGpT46VkTPY6O=w300-h400)
-
+![](assets/images/20210808_122429.jpg){: width="400" height="300" }
 _The finished project displaying the Raspberry Pi boot screen_
 
 I first embarked on this particular project after I had setup [Home Assistant](https://www.home-assistant.io/) on my Home Server and wanted a way to display the information on the dashboard in my workshop.
 
-I was also inspired by the blank whiteboard I had hanging on my wall already and the smart home dashboards built by the members or [r/homelab](https://www.reddit.com/r/homelab/ ).
+I was also inspired by the blank whiteboard I had hanging on my wall already and the smart home dashboards built by the members or [r/homelab](https://www.reddit.com/r/homelab/).
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEjJbvitPyAteZdby1xrsVa6A9_ZTtAQesRZaIT8zIOD8ESLBw5-xhyDxDqDN1L_445mPCR_DhwtHb6ft2SB3ROehKufVvF-MuA93mltThGDqRt_JjqcME8FW1RmoGpod0ww3t3u6UFntJlvs2UC8wQkHWaJzrNKIqxdMIVHn38k_4Bb9wVTx79grd1J=w400-h300)
-
+![](assets/images/20210807_110641.jpg){: width="400" height="300" }
 _The destroyed pin-board and whiteboard_
 
 The first piece I needed was a whiteboard, with the one I used pictured above. As it was already partly destroyed by someone else, it was perfect for this project as I was throwing out the cork half anyway.
@@ -38,8 +36,7 @@ Finally, the display requires a way to load and display the Home Assistant dashb
 
 First, the pin-board needed to be disassembled so that the cork half could be removed so that only the whiteboard remained. Luckily, the frame was only held together with staples and the panels were not attached to the frame, rather just sitting within grooves, so i was able to pull it apart nice and cleanly.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEg84EWzrlZBI7Ps7Pvt_YAC6Rd3f0SiTqIT94DM_yJoOBEB5fIErw7aGq-b4bQdaDZfe0hni7N9y_icbwg5MwOLU427DgPatbuxzve8xWgJ2vMuoJBxJf6WDM_oeSkAOxg78-dmB2Cqer-crSzksNYaQqD8Wxlw0b2pq5WTVBGgG6aaEBgaIjdZWsQP=w300-h400)
-
+![](assets/images/20210807_111445.jpg){: width="400" height="300" }
 _The board completely disassembled_
 
 The next order of business was to modify the frame so that only the whiteboard half was framed.
@@ -50,42 +47,36 @@ This frame was then held together using nails and glue, with the whiteboard sect
 
 After this, the display panel was measured and a hole of the same size was cut out of the whiteboard. This was not perfectly straight and centred, but it was close enough for me to be pleased with the result.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEgWBkXJKP8JickWX1HE9hlH4A3DCstRKvuoBYbnngviGcv-FLCQdwCLU68fkRx9164sXFYINvDXXjoUR4cop4d4usXyfGpgkY0idtpXYOeKkInGCGhxyyoBzj8LZcy3Dwj5mP-mSKdtAoB3P2VdrNqYM9WGkrE2f_SFXxrpFwEbzz_Y8NfRVvU9t8pm=w300-h400)
-
+![](assets/images/20210807_132636.jpg){: width="400" height="300" }
 _The screen inserted into the whiteboard_
 
 As the whiteboard portion was only made from cardboard with a whiteboard sticker, the cuts were not very neat, but they did the job.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEitDLDRbqKK93sK1XW6dyyRejTXJGi6oha8IA9U7qDsXaJcNzshPRy-xI6otQ2JbNatnALcN0vPYP7-1MkrQZ79jWxPzakzFsQWcde38-G8WNOXO_G4POlSTln-gJcxwJYW8kpjTnW7gDlJJtfaa6IXWil6roCqysiwTcL2aEZI-uJ8tIXsE5fKy6_d=w400-h300)
-
+![](assets/images/20210807_135148.jpg){: width="400" height="300" }
 _The messy cutting as seen from the back_
 
 To secure the screen to the whiteboard, electrical tape was used to join the screen bezel to the whiteboard as well as cover any imperfections in the cuts.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEiVMzw6_hxoZDoC74Q8ODEPI9-jHcOcUugRTKhOvzMo_v_VEWSK10xOrwMWze9gxBZwIP9B29FDrMdwtjOLaRIDMalBS3yuAE-v4GGivpiH5Iml2Oc2wzOsRpmQ1i1l5AvvCxT2HBXp9vEqhhytMyadF9fJbTEK5r-3IODFxmMBIqQPWsE3Z7F-bGyD=s320)
-
+![](assets/images/20210807_135135.jpg){: width="400" height="300" }
 _The tape applied to the front of the screen_
 
 This tape was applied to both the front and back, excluding where the display control board was, to make sure the display was secured in both directions.
 
 Now that the screen was attached to the whiteboard, the frame was reinstalled with it's modifications using nails and glue.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEj3GdPRao0ZBEQmPN3brCmhcBjB4jaY025KUp5CIhOwL8vMHtXytcilddxN6fW-YYbSop16RVTZ2RPpoJl7anVPU7tLRlgjhHMoZLyAsPkzso_C2RVOPS_dqbmkLPerT02bPhtldJPUbOHIVG9uEt4ADDQocjdpdA4FtPcu-aX8ou9wnx9d_OPhwO_w=w400-h300)
-
+![](assets/images/20210808_103218.jpg){: width="400" height="300" }
 _The whiteboard with the frame attached_
 
 Now that the frame was attached, I needed a way to attach the electronics like the controller board without a risk of them shorting against the metal backing of the display. To solve this, a piece of wood was cut to fit inside the back of the frame so that it was flush, and it was then attached to the screen and whiteboard using double-sided tape. This also provides more contact between the screen and the frame, reducing the risk of it falling out.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEjgaouq3QHt04kkrQVs0yi28EurYpu2pWco9fKDzQ3t0M1L8xfIpLmn2vY3yGlDamzRgpVcgGxJ0drBd7J4-y9OHdr_F7A0_TRa0f0BCNXL0LAoI_NswwjuSFuLBuboEmpVZy1EWYggN3aJ6y2nL7nrGpTdbknd61fjINe5M_NjUyGVqUl1qtjn6rpM=w300-h400)
-
+![](assets/images/20210808_111539.jpg){: width="400" height="300" }
 _The backing wood with all the required holes and tape_
 
 Holes were required for the controller board as well as the backlight port, so that nothing was broken and everything could be accessed easily.
 
 All that was left to do was install the electronics!
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEh2zXuqHI6Q07VdaLIrtzo3c_S4M5f6PKp3zJa8f4Mm22jf3-7eByQxIgqao35rttp7OiNSkmtysek4e1NHK9SeWPkLsE2z1mVaTlpD4LXrt54Fjq9jysHIy2rdSfoOJedULtppKz9haQmPSaLWdLil7KvVEks8uD13TqBe2j1CbiKdzludlsMXb0EQ=w300-h400)
-
+![](assets/images/20210808_113727.jpg){: width="400" height="300" }
 _All the electronics laid out on the back_
 
 All the components were attached using double-sided foam tape, as screws would interfere with the screen.
@@ -97,8 +88,7 @@ The first task was flashing an SD Card with an up-to date version of Raspberry P
 
 The first boot proved successful, as after the rainbow boot screen, the boot debugging appeared, followed by the initial setup.
 
-![](https://blogger.googleusercontent.com/img/a/AVvXsEjADEZj9f8VpbPj91PzyXgiCsf1N6AND81K1pabBUF5UNO3kD81DJDSqL8nYjGsfPneTUoED9MWlH_8YWfrUIzmVEJPN2WSbko6dtkqCaqwt1Faf3utViKb2UT-6cxJiy8GkSDbF7x5G_2LuwYi3cZ5CeZoK6ZA8OCa8QKVCApzu8sfu5X2UiHiNsF4=w300-h400)
-
+![](assets/images/20210808_122431.jpg){: width="400" height="300" }
 _The boot debugging from the Pi Zero W_
 
 As this is not a tutorial, I will not be detailing every step to setting up the software. This is also because it will vary from setup to setup.
@@ -123,6 +113,6 @@ Finally, something I have not found a solution for yet is powering both the Pi Z
 
 Now that this project is mostly complete, I am overall satisfied with the outcome, and the amount of room for improvement in the future.
 
-As always, if you liked this project, you can find all my other projects [here](https://blog.crankshafttech.com/search/label/Projects), and also through the tags below or in the sidebar.
+As always, if you liked this project, you can find all my other projects [here](/tags/projects/), and also through the tags below or in the sidebar.
 
 If you have any feedback, please leave it in the comments below,  and thanks again for reading!

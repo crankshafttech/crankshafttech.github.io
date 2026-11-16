@@ -10,18 +10,118 @@ redirect_from:
   - "/2021/03/how-to-setup-pihole-pivpn-unbound.html"
 ---
 
-[![](/assets/images/pihole_logo.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRUPGAFplOgg4WeT123f41hG2GjZmddZs7GXxIoq1FFQukNmOEzTlH_vnKbniickM700c968ibUSS5iy0d2VdOxlLfLEEQph7tbesozKeuSAb_dimI8B-gw5wDha32jeNifwtxrPvjO4k/s512/pihole_logo.png)
-Since the [last time I wrote about PiHole in 2019](https://blog.crankshafttech.com/2019/12/set-up-pihole-with-doh-and-pivpn.html), that tutorial has accumulated over 25,000 views and is by far the most viewed post on this blog. Even to this day, that tutorial racks up hundreds of views every month, even though it is sorely out of date. A lot has changed since 2019, including a global pandemic, and more relevant to us, the ease of configuring and installing a network wide ad-blocker. As I alluded to earlier, the old tutorial is sorely out of date, making use of OpenVPN, and DNS-over-HTTPS, both of which are much easier to configure or have been superseded since. I realised how much easier it is now when I moved my PiHole and VPN to a VM on my new Homelab, which made me realise how sorely an update was needed. Without further ado, here is the much simplified 2021 edition of installing PiHole and PiVPN on a your Raspberry Pi or any Debian-based Linux Distro. If you need instructions on how to install Raspbian, please read that section of the [old](https://blog.crankshafttech.com/2019/12/set-up-pihole-with-doh-and-pivpn.html)[tutorial](https://blog.crankshafttech.com/2019/12/set-up-pihole-with-doh-and-pivpn.html) as nothing notable has changed on that front. If you are using something other than a Raspberry Pi, I recommend using [Ubuntu Server](https://ubuntu.com/download/server), although any Debian-based distribution should be able to follow this tutorial.All screenshots are from Ubuntu Server 18.04 LTS, although it should look mostly identical on other platforms, including Raspberry Pi.
-Installing PiHoleInstalling PiHole first is crucial, as it allows much of the auto configuration later to occur. Copy and paste the following command into the terminal on your system:
-curl -sSL https://install.pi-hole.net | bashIf the installer asks for a root password, provide it. [![](/assets/images/root_pw_pihole.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb4wLg4uMYd4e7YPztCHRoHG1Pbrmc9NkbFv9s_9YYiW0atxfKZz3dl9n9YPcVmsnjrooOrmp5jGmHIdlXCgxzcWjewE3h2XwAMm6v1P4os080Nsmi1a4AwPmSkqcKdVQOzqizHMq4hBs/s737/root_pw_pihole.png)After clicking ENTER a few times, you should be presented with a list of Upstream DNS Providers. This doesn't matter for now if you plan to install unbound, otherwise select whichever one you prefer. This can be changed later from the Web UI. Leave the default list selected unless you prefer others.Leave both IPv4 and IPv6 selected unless you know your network only uses one or the other.Next you will be asked about setting a static IP. Select yes. [![](/assets/images/static_ip_q.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrgjpYoFX7jNS7TM-MoIYF9RNyVSP4L1gn4BF7BDOXzl2Ubs3RP1sgNTqBsTK63ijHtT1Uo6f841bR1hR3qV9NBRlsOo11LM-r9pJNfwKSYUc345dDW2K8RXTZXs3PjmeMcY1x9xk4t3w/s737/static_ip_q.png)Make note of the warning, as you should go to your router and set it as a static IP in the DHCP server so another device doesn't get given it.
-Go to your router's website to find out how for your model. Select On for the web interface and web server / PHP when prompted.
-Select On for log queries if you're not a privacy freak, and then select your level of logging you are comfortable with. This will break some charts on the Web UI if 0 is not selected. Now the installer will proceed to install the Web UI and other components.
-Once the installer finishes, now is a good time to reset the Web UI password from the default. This can be done with the following command:
-pihole -a -p followed by your new password twice.  Once this is done, you can login to the Web UI with it's IP address and use the password you just created. Once there, make sure everything shows up correctly and there are no errors.  [![](/assets/images/pihole_webUI.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLWHeyf76CsqZ6IF4VEkap_TSN1tIn6cLxjeyqZGSj1hjbeoHvts4J8qMYoKqZ-_jW7NxbZA0AlmQtEsMb-0QjgYhCAlnXhp1S4PyhrEe4ZraK65-Cr7zJSyA1JZambWtKlwXIVeWJJV0/s1247/pihole_webUI.png)Configuring devices to use PiHoleNow that it is setup, you need to configure your devices to use PiHole. This can be done in one of 3 ways:Network-wide at the router levelNetwork-wide with the PiHole as DHCPSpecific devices onlyThey are all easy to set up, but some take longer than others. 1. Network-wide at the router levelOpen your router's web control panel. The login can usually found on a sticker on the router. Go to the LAN section, then the DHCP server. Find the DNS server under this, and enter the IP address of the PiHole.
-(If you haven't set a static IP, this is also likely the place to do so)  Click save and it should propogate to all your devices the next time they connect.  2. Network-wide with PiHole as DHCPOne awesome feature is that you can [set the PiHole as the DHCP server](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026) which assigns IP addresses to devices on the network, which also solves the static IP issue. This method takes a few more steps, but is still quite simple.   Open your router's web control panel. This can usually found on a sticker on the router. Go to the LAN section, then the DHCP server. Disable the DHCP server. Make sure it is off before proceeding.
-NOTE: This will prevent devices from easily connecting to the network. You will need to manually assign IPs **for the time being**. Go to the PiHole Web UI and loginGo to Settings and then the DHCP tab. [![](/assets/images/PiHole_DHCP_Tab.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjOJa4bZyWbOfdQtnDIue05g6ssraOSmWMsqr_WaYZNihnAA9oXIMeeno_ZCpNtEmDSv5hJklmZ5vDAFe9pLzfjA5VFduUvs1B8PyvDERQ9hJZTvbP4uKL2PrpTY1UOeuBQvFWBD8ZUxI/s1244/PiHole_DHCP_Tab.png)Toggle the DHCP Server to ON. Make sure the Gateway/Router and IP range are set correctly. If you have a simple setup, it should be correct. Scroll to the bottom and click Save. Now if you connect a device to the network, it should be assigned an IP address automatically. 
-3. Specific Devices OnlyThis is by far the easiest to configure, but can take the longest and varies between devices. Go to your network settings and find the WiFi or Ethernet connection you have.  However your device lets you, change **both** DNS servers to the IP Address of the PiHole. Click Save.Alternate Specific Device OnlyOne awesome feature that has been added to PiHole as part of version 5 is the ability to set different blocklists for different devices. One way you could set devices to not use PiHole is follow method 1 or 2 and add the devices to a group that has no blocklists or vice versa. This means that on devices with no lists everything is forwarded directly to the Upstream DNS provider with no blocks. These steps can also be used with method 3 if you want different lists for different devices.
-Go to the PiHole Web UI and go the the Group Management section. Select Groups.[![](/assets/images/Blocking_group.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhT-FxrWqFCaXQoZ3qiJGK2tESciABKMyOawx-IC7yrnZHE1sUvnsa61x0q3G5avVdBBuV4jD9cEhbOBdHDzchJz_0LtoI3hrl0s6kNNYWRbp0cj68EQPKRhCtQx6isW-_-x-4mLTQ20Zs/s1275/Blocking_group.png)
+![](/assets/images/pihole_logo.png){: width="200" height="300" }
+
+Since the [last time I wrote about PiHole in 2019](/posts/how-to-set-up-a-pihole-with-pivpn-and-dns-over-https/), that tutorial has accumulated over 25,000 views and is by far the most viewed post on this blog. Even to this day, that tutorial racks up hundreds of views every month, even though it is sorely out of date.
+
+A lot has changed since 2019, including a global pandemic, and more relevant to us, the ease of configuring and installing a network wide ad-blocker. As I alluded to earlier, the old tutorial is sorely out of date, making use of OpenVPN, and DNS-over-HTTPS, both of which are much easier to configure or have been superseded since.
+
+I realised how much easier it is now when I moved my PiHole and VPN to a VM on my new Homelab, which made me realise how sorely an update was needed.
+
+Without further ado, here is the much simplified 2021 edition of installing PiHole and PiVPN on a your Raspberry Pi or any Debian-based Linux Distro. 
+
+If you need instructions on how to install Raspbian, please read that section of the [old tutorial](/posts/how-to-set-up-a-pihole-with-pivpn-and-dns-over-https/) as nothing notable has changed on that front. If you are using something other than a Raspberry Pi, I recommend using [Ubuntu Server](https://ubuntu.com/download/server), although any Debian-based distribution should be able to follow this tutorial.
+
+All screenshots are from Ubuntu Server 18.04 LTS, although it should look mostly identical on other platforms, including Raspberry Pi.
+
+## Installing PiHole
+
+Installing PiHole first is crucial, as it allows much of the auto configuration later to occur. 
+
+1. Copy and paste the following command into the terminal on your system:
+
+    ```bash
+    curl -sSL https://install.pi-hole.net | bash
+    ```
+
+2. If the installer asks for a root password, provide it. 
+
+    ![](/assets/images/root_pw_pihole.png)
+
+3. After clicking ENTER a few times, you should be presented with a list of Upstream DNS Providers. This doesn't matter for now if you plan to install unbound, otherwise select whichever one you prefer. This can be changed later from the Web UI. 
+
+4. Leave the default list selected unless you prefer others.
+
+5. Leave both IPv4 and IPv6 selected unless you know your network only uses one or the other.
+
+6. Next you will be asked about setting a static IP. Select yes.
+
+    ![](/assets/images/static_ip_q.png)
+
+7. Make note of the warning, as you should go to your router and set it as a static IP in the DHCP server so another device doesn't get given it.
+Go to your router's website to find out how for your model.
+
+8. Select On for the web interface and web server / PHP when prompted.
+
+9. Select On for log queries if you're not a privacy freak, and then select your level of logging you are comfortable with. This will break some charts on the Web UI if 0 is not selected.
+
+10. Now the installer will proceed to install the Web UI and other components.
+
+11. Once the installer finishes, now is a good time to reset the Web UI password from the default. This can be done with the following command:
+    `pihole -a -p` followed by your new password twice.
+
+12. Once this is done, you can login to the Web UI with it's IP address and use the password you just created.
+
+13. Once there, make sure everything shows up correctly and there are no errors.
+
+    ![](/assets/images/pihole_webUI.png)
+
+## Configuring devices to use PiHole
+
+Now that it is setup, you need to configure your devices to use PiHole. This can be done in one of 3 ways:
+
+1. Network-wide at the router level
+
+2. Network-wide with the PiHole as DHCP
+
+3. Specific devices only
+
+They are all easy to set up, but some take longer than others. 
+
+### 1. Network-wide at the router level
+
+1. Open your router's web control panel. The login can usually found on a sticker on the router.
+
+2. Go to the LAN section, then the DHCP server.
+
+3. Find the DNS server under this, and enter the IP address of the PiHole.
+    (If you haven't set a static IP, this is also likely the place to do so)
+
+4. Click save and it should propogate to all your devices the next time they connect.
+
+### 2. Network-wide with PiHole as DHCP
+
+One awesome feature is that you can [set the PiHole as the DHCP server](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026) which assigns IP addresses to devices on the network, which also solves the static IP issue.
+
+This method takes a few more steps, but is still quite simple.
+
+1. Open your router's web control panel. This can usually found on a sticker on the router.
+
+2. Go to the LAN section, then the DHCP server.
+
+3. Disable the DHCP server. Make sure it is off before proceeding.
+    NOTE: This will prevent devices from easily connecting to the network. You will need to manually assign IPs **for the time being**.
+    
+4. Go to the PiHole Web UI and login
+
+5. Go to Settings and then the DHCP tab.
+    
+    ![](/assets/images/PiHole_DHCP_Tab.png)
+
+6. Toggle the DHCP Server to ON.
+
+7. Make sure the Gateway/Router and IP range are set correctly. If you have a simple setup, it should be correct.
+
+8. Scroll to the bottom and click Save. 
+
+9. Now if you connect a device to the network, it should be assigned an IP address automatically.
+
+### 3. Specific Devices Only
+
+This is by far the easiest to configure, but can take the longest and varies between devices. Go to your network settings and find the WiFi or Ethernet connection you have.  However your device lets you, change **both** DNS servers to the IP Address of the PiHole. Click Save.Alternate Specific Device OnlyOne awesome feature that has been added to PiHole as part of version 5 is the ability to set different blocklists for different devices. One way you could set devices to not use PiHole is follow method 1 or 2 and add the devices to a group that has no blocklists or vice versa. This means that on devices with no lists everything is forwarded directly to the Upstream DNS provider with no blocks. These steps can also be used with method 3 if you want different lists for different devices.
+Go to the PiHole Web UI and go the the Group Management section. Select Groups.
+
+![](/assets/images/Blocking_group.png)
 Create a group for the device/s you do/don't want using PiHole's blocklists.Go to the Clients section. [![](/assets/images/PiHole_Domains_Clients.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqRBokGW_OqNR3EFLzqNWhR1L5hg0ngMGf0erZBCai9Fr1fafHLonbIS1veNPcmICeaVE30EVLamc1v-fUi52RcO_3eBNKiYG60wpz_3nXa8wmtA9HF_OpDG5UC6D4iazoUpRHn1JQIlc/s1250/PiHole_Domains_Clients.png)Select a client device from the dropdown that you want to add to the list and click Add.Click on the group assignment and select the group/s you want the device to belong to. These changes automatically save as you go. If you want to add list specific black and whitelists, this can be done under the Domains section. [![](/assets/images/PiHole_Domains_Groups.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg53ZA6PT2xaiZuqtvNM8EDR0ohcSixCdxJAG4Pck3QMjXk-9S3sQooHVNEdI8SvmhiW75zTbLOf8rQnswLB-LtsX0dSjwUHsbU3ZVrvcnsCcOsn49D1nrhlO5WqqLIiuc7zHnP8jWXNBw/s1258/PiHole_Domains_Groups.png)To add or remove blocklists/adlists, go to the adlists section and enter the URL to the list. [![](/assets/images/PiHole_Domains_Adlists.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXpRBiUrm2pPv7rZ7-Cg5LC5COf1aL0RYTiivR3jWhM7PLnPoUG8ItKJ0qrQZh2U4qc4XA5-w0YvKSuzKQdOXGbo0jUgqwjhiJkTwjI_8naaEaOVCjxSvEc9HsMkwlx1tTSWSP2y0-5-I/s1250/PiHole_Domains_Adlists.png)Select the group/groups you want the list to be used or not used by. PiHole installation is now complete! For more information on things you can change, like local DNS, check out the PiHole documentation at [https://docs.pi-hole.net/](https://docs.pi-hole.net/). [![](/assets/images/pivpnlogo.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitrY1Ktfulwhx2eL-IeIrw2zJyYo5lX7_qxBR0s0Q1T4JRCCHOmrZr8hehU5luWg2qzYhZLQsi73Ye_OtJ_URH9XTcLY635PSayvRPIdmEqwhrE19yWUEjZ77u4n58F6LqvYPX8MznHCI/s512/pivpnlogo.png)
 Installing PiVPNPiVPN has changed a lot since 2019. Since then, Wireguard has been released, which is a simpler, and better in every way VPN protocol. They also added auto-PiHole configuration so that profile names appear in the Web UI and you don't have to manually configure files to make it work. Also, split tunnels are much easier to configure (more on them later).**NOTE:**If you cannot get a static IP from your ISP, or your dynamic one changes frequently, I highly recommend you looking into a Dynamic DNS service like [afraid.org](http://afraid.org)  which provides you with a URL to your IP and a script to update it to always point to the right place.
 If you go this route, enter the URL created in Step 10 under the DNS Entry option.

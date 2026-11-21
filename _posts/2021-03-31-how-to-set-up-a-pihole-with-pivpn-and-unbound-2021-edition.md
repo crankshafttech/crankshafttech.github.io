@@ -118,41 +118,294 @@ This method takes a few more steps, but is still quite simple.
 
 ### 3. Specific Devices Only
 
-This is by far the easiest to configure, but can take the longest and varies between devices. Go to your network settings and find the WiFi or Ethernet connection you have.  However your device lets you, change **both** DNS servers to the IP Address of the PiHole. Click Save.Alternate Specific Device OnlyOne awesome feature that has been added to PiHole as part of version 5 is the ability to set different blocklists for different devices. One way you could set devices to not use PiHole is follow method 1 or 2 and add the devices to a group that has no blocklists or vice versa. This means that on devices with no lists everything is forwarded directly to the Upstream DNS provider with no blocks. These steps can also be used with method 3 if you want different lists for different devices.
-Go to the PiHole Web UI and go the the Group Management section. Select Groups.
+This is by far the easiest to configure, but can take the longest and varies between devices.
 
-![](/assets/images/Blocking_group.png)
-Create a group for the device/s you do/don't want using PiHole's blocklists.Go to the Clients section. [![](/assets/images/PiHole_Domains_Clients.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiqRBokGW_OqNR3EFLzqNWhR1L5hg0ngMGf0erZBCai9Fr1fafHLonbIS1veNPcmICeaVE30EVLamc1v-fUi52RcO_3eBNKiYG60wpz_3nXa8wmtA9HF_OpDG5UC6D4iazoUpRHn1JQIlc/s1250/PiHole_Domains_Clients.png)Select a client device from the dropdown that you want to add to the list and click Add.Click on the group assignment and select the group/s you want the device to belong to. These changes automatically save as you go. If you want to add list specific black and whitelists, this can be done under the Domains section. [![](/assets/images/PiHole_Domains_Groups.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg53ZA6PT2xaiZuqtvNM8EDR0ohcSixCdxJAG4Pck3QMjXk-9S3sQooHVNEdI8SvmhiW75zTbLOf8rQnswLB-LtsX0dSjwUHsbU3ZVrvcnsCcOsn49D1nrhlO5WqqLIiuc7zHnP8jWXNBw/s1258/PiHole_Domains_Groups.png)To add or remove blocklists/adlists, go to the adlists section and enter the URL to the list. [![](/assets/images/PiHole_Domains_Adlists.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjXpRBiUrm2pPv7rZ7-Cg5LC5COf1aL0RYTiivR3jWhM7PLnPoUG8ItKJ0qrQZh2U4qc4XA5-w0YvKSuzKQdOXGbo0jUgqwjhiJkTwjI_8naaEaOVCjxSvEc9HsMkwlx1tTSWSP2y0-5-I/s1250/PiHole_Domains_Adlists.png)Select the group/groups you want the list to be used or not used by. PiHole installation is now complete! For more information on things you can change, like local DNS, check out the PiHole documentation at [https://docs.pi-hole.net/](https://docs.pi-hole.net/). [![](/assets/images/pivpnlogo.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitrY1Ktfulwhx2eL-IeIrw2zJyYo5lX7_qxBR0s0Q1T4JRCCHOmrZr8hehU5luWg2qzYhZLQsi73Ye_OtJ_URH9XTcLY635PSayvRPIdmEqwhrE19yWUEjZ77u4n58F6LqvYPX8MznHCI/s512/pivpnlogo.png)
-Installing PiVPNPiVPN has changed a lot since 2019. Since then, Wireguard has been released, which is a simpler, and better in every way VPN protocol. They also added auto-PiHole configuration so that profile names appear in the Web UI and you don't have to manually configure files to make it work. Also, split tunnels are much easier to configure (more on them later).**NOTE:**If you cannot get a static IP from your ISP, or your dynamic one changes frequently, I highly recommend you looking into a Dynamic DNS service like [afraid.org](http://afraid.org)  which provides you with a URL to your IP and a script to update it to always point to the right place.
+1. Go to your network settings and find the WiFi or Ethernet connection you have.
+
+2. However your device lets you, change **both** DNS servers to the IP Address of the PiHole.
+
+3. Click Save.
+
+#### Alternate Specific Device Only
+
+One awesome feature that has been added to PiHole as part of version 5 is the ability to set different blocklists for different devices.
+
+One way you could set devices to not use PiHole is follow method 1 or 2 and add the devices to a group that has no blocklists or vice versa. This means that on devices with no lists everything is forwarded directly to the Upstream DNS provider with no blocks.
+
+These steps can also be used with method 3 if you want different lists for different devices.
+
+1. Go to the PiHole Web UI and go the the Group Management section.
+2. Select Groups.
+
+    ![](/assets/images/Blocking_group.png)
+
+3. Create a group for the device/s you do/don't want using PiHole's blocklists.
+
+4. Go to the Clients section.
+
+    ![](/assets/images/PiHole_Domains_Clients.png)
+
+5. Select a client device from the dropdown that you want to add to the list and click Add.
+
+6. Click on the group assignment and select the group/s you want the device to belong to.
+
+7. These changes automatically save as you go.
+
+8. If you want to add list specific black and whitelists, this can be done under the Domains section.
+
+    ![](/assets/images/PiHole_Domains_Groups.png)
+
+9. To add or remove blocklists/adlists, go to the adlists section and enter the URL to the list.
+
+    ![](/assets/images/PiHole_Domains_Adlists.png)
+
+10. Select the group/groups you want the list to be used or not used by. 
+
+PiHole installation is now complete! 
+
+For more information on things you can change, like local DNS, check out the PiHole documentation at [https://docs.pi-hole.net/](https://docs.pi-hole.net/).
+
+![](/assets/images/pivpnlogo.png){: width="200" height="300" }
+
+## Installing PiVPN
+
+PiVPN has changed a lot since 2019. Since then, Wireguard has been released, which is a simpler, and better in every way VPN protocol. They also added auto-PiHole configuration so that profile names appear in the Web UI and you don't have to manually configure files to make it work. Also, split tunnels are much easier to configure (more on them later).
+
+**NOTE:**If you cannot get a static IP from your ISP, or your dynamic one changes frequently, I highly recommend you looking into a Dynamic DNS service like [afraid.org](http://afraid.org)  which provides you with a URL to your IP and a script to update it to always point to the right place.
 If you go this route, enter the URL created in Step 10 under the DNS Entry option.
-Run the following command in the terminal:
-curl -L https://install.pivpn.io | bashEnter the root password when asked. Eventually a screen should appear for the Installer. [![](/assets/images/PiVPN_Intro.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrUGf885p-DtE-eDraaIAn3J-JZub62y7-zmnO0OcbJ3ZybYVn6TyY1RTGWtkB_AqkkjzyGTuLcu6aLTwKpYFE0mu88oJ4ambqZ9MH22fecnzAMdIJI-ZqqTynCng5T8ibq25NRLtQgk4/s737/PiVPN_Intro.png)Next it will start setting up a Static IP.
-If you are on anything other than Raspbian, it will show the following prompt, which is not a problem. [![](/assets/images/PiVPN_Static_IP.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUPI6rnSqw7MDZmvLd8GBqt13Wo-0GDmrSX6Nq1Xo8EzUwX4vbFlYnj0_sS7R1XonuVhUywgGj-aYtn3aA98KIVy0od4FJikDkskjz5y38FCKFCXQbHfMIakwIDZf_giY1RsXNWIh3Atg/s737/PiVPN_Static_IP.png)After that it will ask which user should hold the VPN configurations for clients. Select the default unless you've configured a separate user for this purpose. Next you will be asked if you want WireGuard or OpenVPN. For this use case, I **strongly** recommend WireGuard, but if you want to stick with OpenVPN, this is where the tutorial ends and you need to look at the old tutorial. After the packages are installed, it will ask for a port number. You can leave it on the default, but changing it can slightly improve security. Make sure whatever you set it to is not used by another service. Also make sure you remember what port you set for later.
-Confirm the port is correct. Next it should detect the PiHole installation and ask if you want it to be used for the VPN. Select Yes. [![](/assets/images/PiVPN_PiHole_Detection.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhK9tS-h-NagI-6DseoTuT4oK_NrCp83IlgbbNJZMEEeg4Zu_2CB70LY0YRQvTXR5ect7jtMSkUBY-j6QjiU7fwE31sWHL6ehfp4AsF_YlRyZ2kLyZrUpEEVjIl_frxOypWivMsN_DBYZ8/s737/PiVPN_PiHole_Detection.png)Next it will ask if you want to use the IP or a URL to connect to the VPN. Unless you have a URL, select the IP Address. [![](/assets/images/PiVPN_Public_IP.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiufDUXIK8cZ9BwuqIbhc-t3Mn0aorLM3gK9NlQRROqjpK8GL4n2UgwDhgLUeFXFTCS8vwNclYb7LTyIgMfGLUoyc3dLbNPCHnTcjvwTkZArqjqVNsO74m0xsr0ypBVTXw5LbOUrc454Og/s737/PiVPN_Public_IP.png)PiVPN will generate the Server Keys. Next it will ask about unattended-upgrades. It is recommended you enable it, as otherwise your installation may be vulnerable to attacks. Now the install is done, it tells you how to create profiles. [![](/assets/images/PiVPN_Complete.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNTVPd6lAbtddCxLNjviMhIyD_HDYQAyC9ISS7Y4mj86oh8XYdAOfcIeNHdoo5hXygdVeDR9eeaK4tU9uxP2x6R1Zhs1231TJn2Ga38XlLLfgZVTENdKmgD5xxk1pUBwzbm9Upsyn1Rn4/s737/PiVPN_Complete.png)The server will now reboot. 
-[![](/assets/images/PiVPN_Reboot.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwKb5w_-XZZFTBq3OZpJ3URy9vvhqU2NsetWNiBN6yM4qqMx-NNM9Yf191SMOklAfgwgTXVkEbukPx_hPqfhS56umLL291UhmdbJFRBMUFw3YoXvwhiJHgs4J8qp_8_dRLGAgd5F7uIpw/s737/PiVPN_Reboot.png)
-Once rebooted, log back in and run the following command:
-pivpn -a Enter the root password if prompted.Enter a client name.
-[![](/assets/images/PiVPN_Profile_Add.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw5YJRSWAdZ7-NwyJguM2Xu3tmt0j5dAZkXa5GbOqk4AhgU-3P5_lvdt6DEYQcQzznXgXWtW0QwjeXJLwkFtexzN_Qhk-kD6JOOb8n4PUmFW75jaEbjijvggUQE621DrKjr7CfJAf-Xsg/s737/PiVPN_Profile_Add.png)Now it will show where the file is saved. There are many ways to load the configuration onto your client device. If it is a **mobile**, you can use the handy QR Code feature to load the config file onto your device. To do this, simply:Run the command pivpn -qr and enter the profile name/number when prompted. Scan the QR that appears on the screen with your WireGuard app. **NOTE:** The QR code is based off the config file in /etc/wireguard/configs and not the one in the home directory. If you want the QR code to include config file changes, you need to change that file instead.   If you are using a **computer** or a device that cannot scan QR Codes, you will need to manually copy the configuration file to it. It is recommended to copy the version in /etc/wireguard/configs, but the one in ~/configs would work too.
-Setting up the TunnelThere are a few different ways you can configure a VPN. One is a Full Tunnel, where everything goes through it, although it is much slower. The second method is a Split Tunnel,  which is where only some traffic goes through it. This is optimal you only want DNS queries going to PiHole, while everything goes over the normal internet. This can also be used to access local IPs and therefore devices remotely. A Full Tunnel is configured by default, but a split tunnel requires a small amount of effort to work. These steps can be followed from either in the WireGuard program or by opening the file in a text editor.
- Locate the line beginning with AllowedIPs, and remove everything after the =. Now we enter the IPs/ranges of IPs we want forwarded over the VPN. To make sure DNS works, Enter 10.6.0.1/24 or 10.6.0.0/24, the second allowing access to all other devices connected over the VPN, while the first only allowing connections specifically to the PiHole. 
+
+1. Run the following command in the terminal:
+
+    ```bash
+    curl -L https://install.pivpn.io | bash
+    ```
+
+2. Enter the root password when asked.
+
+3. Eventually a screen should appear for the Installer.
+
+    ![](/assets/images/PiVPN_Intro.png)
+
+4. Next it will start setting up a Static IP.
+If you are on anything other than Raspbian, it will show the following prompt, which is not a problem.
+
+    ![](/assets/images/PiVPN_Static_IP.png)
+
+5. After that it will ask which user should hold the VPN configurations for clients. Select the default unless you've configured a separate user for this purpose.
+
+6. Next you will be asked if you want WireGuard or OpenVPN. For this use case, I **strongly** recommend WireGuard, but if you want to stick with OpenVPN, this is where the tutorial ends and you need to look at the old tutorial.
+
+7. After the packages are installed, it will ask for a port number. You can leave it on the default, but changing it can slightly improve security. Make sure whatever you set it to is not used by another service. Also make sure you remember what port you set for later.
+
+8. Confirm the port is correct.
+
+9. Next it should detect the PiHole installation and ask if you want it to be used for the VPN. Select Yes.
+
+    ![](/assets/images/PiVPN_PiHole_Detection.png)
+
+10. Next it will ask if you want to use the IP or a URL to connect to the VPN. Unless you have a URL, select the IP Address.
+
+    ![](/assets/images/PiVPN_Public_IP.png)
+
+11. PiVPN will generate the Server Keys.
+
+12. Next it will ask about unattended-upgrades. It is recommended you enable it, as otherwise your installation may be vulnerable to attacks.
+
+13. Now the install is done, it tells you how to create profiles.
+
+    ![](/assets/images/PiVPN_Complete.png)
+
+14. The server will now reboot.
+
+    ![](/assets/images/PiVPN_Reboot.png)
+
+15. Once rebooted, log back in and run the following command:
+
+    ```bash
+    pivpn -a 
+    ```
+
+16. Enter the root password if prompted.
+
+17. Enter a client name.
+
+    ![](/assets/images/PiVPN_Profile_Add.png)
+
+18. Now it will show where the file is saved.
+
+There are many ways to load the configuration onto your client device. If it is a **mobile**, you can use the handy QR Code feature to load the config file onto your device. 
+
+To do this, simply:
+
+1. Run the command `pivpn -qr` and enter the profile name/number when prompted.
+
+2. Scan the QR that appears on the screen with your WireGuard app. 
+
+**NOTE:** The QR code is based off the config file in /etc/wireguard/configs and not the one in the home directory. If you want the QR code to include config file changes, you need to change that file instead.
+
+If you are using a **computer** or a device that cannot scan QR Codes, you will need to manually copy the configuration file to it. It is recommended to copy the version in /etc/wireguard/configs, but the one in ~/configs would work too.
+
+### Setting up the Tunnel
+
+There are a few different ways you can configure a VPN. One is a Full Tunnel, where everything goes through it, although it is much slower. 
+
+The second method is a Split Tunnel, which is where only some traffic goes through it. This is optimal if you only want DNS queries going to PiHole, while everything else goes over the normal internet. This can also be used to access local IPs and therefore devices remotely.
+
+A Full Tunnel is configured by default, but a split tunnel requires a small amount of effort to work.
+
+These steps can be followed from either in the WireGuard program or by opening the file in a text editor.
+
+1. Locate the line beginning with AllowedIPs, and remove everything after the `=`.
+
+2. Now we enter the IPs/ranges of IPs we want forwarded over the VPN.
+
+3. To make sure DNS works, Enter `10.6.0.1/24` or `10.6.0.0/24`, the second allowing access to all other devices connected over the VPN, while the first only allowing connections specifically to the PiHole.
 
 ![Specifics](/assets/images/PiVPN_IP_Specific.png)
-
 _Specific Devices/IPs_
 
-If you want to be able to access local devices, enter their IPs followed by /24 or a range to pass through multiple, with the form *.*.*.0 followed by /24. Substitute the * for your IP range. 
+4. If you want to be able to access local devices, enter their IPs followed by `/24` or a range to pass through multiple, with the form `*.*.*.0` followed by `/24`. Substitute the `*` for your IP range.
 
 ![Ranges](/assets/images/PiVPN_IP_Ranges.png)
-
 _Ranges of Devices/IPs_
 
-Load the file into your VPN program and you should be good to go!Setting up Port ForwardingThis service requires a port to be opened to the internet, and this may not be possible in all cases depending on your ISP. Go to your router's Web UI.
- Find Port Forwarding, which is likely around a WAN section. This varies between models and manufacturers. Use the port you assigned earlier as the internal and external ports and forward both TCP and UDP through it. If it asks for a internal device IP, enter the Pi's IP. Click save and attempt to use your VPN. If the VPN refuses to work, your ISP may use CG-NAT (Carrier-Grade NAT). You will need to contact them and attempt to get it disabled, which may not always be possible. **Without it disabled, Port Forwarding is not possible**.
-Installing Unbound
-Unbound is a recursive, caching DNS resolver that allows for fast, secure DNS resolution with support for features like DNS-over-TLS and DNS-over-HTTPS. More info on how it works and the source of these instructions can be found [here](https://docs.pi-hole.net/guides/dns/unbound/). Command-line
-Install unbound using the following command: sudo apt install unbound. [![](/assets/images/Unbound_Install_1.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCns7F7XCIcl9a1vyTAk7C2xq-9m0m7aUKBvInFzGaTjfs4y68BH35yHacziPI8DGRIsoaFBAWQuwV-Xg_Wvq1j14iJwEF2QTLtZ7-aEcKNa4v8tkx_nBnLggS1Z67jbM6K-ofwlcvigU/s979/Unbound_Install_1.png)Enter the sudo password when asked.Press Y to confirm the installation. Once the install is finished, check that  dns-root-data is installed with the command apt show dns-root-data. It should show info about the package. [![](/assets/images/Unbound_dns-root-data.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRdF-D2u-j6KzmYEACFlJadupxVKwnoijpWKwghtJAO-LVx05woayOTCcX75SzbOhVYbvNcJd0ajBJTHkNlun58lX6gvA_7wR7Y3u51eGr9H7OaLer_Dd5hTCzTlLc54GwWWxz96jiP4g/s979/Unbound_dns-root-data.png)If the package is not on your platform, run the following command every 6 months:
-wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound/root.hints
-Open the configuration using the following command: sudo nano /etc/unbound/unbound.conf.d/pi-hole.confPaste the contents of the following link into the file: [https://www.crankshafttech.com/unbound-config.txt](https://www.crankshafttech.com/unbound-config.txt)[](https://www.crankshafttech.com/unbound-config.txt)[![](/assets/images/Unbound_Config_File.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7RDLn0yi9Uyx6qoSUSZqstHsKtytYNfFpqUEn4GUXttqlGoqivNUjHFpNfCNDpkces4lNiedbjNT2VA9zpVpRIdVwUschFPLQ3H936oOyDLXLRpmV_LHfxmi4kCSHXSxlpCsxboztowg/s979/Unbound_Config_File.png)Close and save the file.  Restart unbound to apply changes: sudo service unbound restartYou can test if it is working using the following command: dig pi-hole.net @127.0.0.1 -p 5335 [![](/assets/images/Unbound_Dig_test.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8Zn4Z7s91Ek0w8gUyU5iisCBWvOtFUWhxDygb4IRzV2M0H-AqGaMBtEufpgiKRXK-BLaR97-KZxWZ5ErWfSdwpv5dPtuSt-zveeU4qZmKWEpm6odCz68phZ71A1FrEijnP-VNJnrnkPM/s979/Unbound_Dig_test.png)PiHole Web UI Go to the Settings section, then the DNS tab. Untick all of the DNS Servers in the left columns. Tick the Custom 1 Server and enter the following IP: 127.0.0.1#5335 [![](/assets/images/PiHole_DNS.png)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtzv6eC5Ndyxhe3t2fOMsF46ad-aO9Dp1pujGTPreYTsxWczv3mMxG644HwsQHCmw40vBEdu2NMERYdH1qt1RmcYA97dPa31TFFpzbUvyeelKmIMdBR244aduyhVuXDHX_5SBEkwnIF0I/s1257/PiHole_DNS.png)Scroll to the bottom and click Save.
+5. Load the file into your VPN program and you should be good to go!
+
+### Setting up Port Forwarding
+
+This service requires a port to be opened to the internet, and this may not be possible in all cases depending on your ISP.
+
+1. Go to your router's Web UI.
+
+2. Find Port Forwarding, which is likely around a WAN section. This varies between models and manufacturers.
+
+3. Use the port you assigned earlier as the internal and external ports and forward both TCP and UDP through it. If it asks for a internal device IP, enter the Pi's IP.
+
+4. Click save and attempt to use your VPN.
+
+If the VPN refuses to work, your ISP may use CG-NAT (Carrier-Grade NAT). You will need to contact them and attempt to get it disabled, which may not always be possible. **Without it disabled, Port Forwarding is not possible**.
+
+## Installing Unbound
+
+Unbound is a recursive, caching DNS resolver that allows for fast, secure DNS resolution with support for features like DNS-over-TLS and DNS-over-HTTPS. More info on how it works and the source of these instructions can be found [here](https://docs.pi-hole.net/guides/dns/unbound/).
+
+### Command-line
+
+1. Install unbound using the following command:
+
+    ```bash
+    sudo apt install unbound
+    ```
+
+    ![](/assets/images/Unbound_Install_1.png)
+
+2. Enter the sudo password when asked.
+
+3. Press Y to confirm the installation.
+
+4. Once the install is finished, check that `dns-root-data` is installed with the command `apt show dns-root-data`. It should show info about the package.
+
+    ![](/assets/images/Unbound_dns-root-data.png)
+
+    If the package is not on your platform, run the following command every 6 months:
+
+    ```bash
+    wget https://www.internic.net/domain/named.root -qO- | sudo tee /var/lib/unbound/root.hints
+    ```
+
+5. Open the configuration using the following command: 
+
+    ```bash
+    sudo nano /etc/unbound/unbound.conf.d/pi-hole.conf
+    ```
+
+6. Paste the contents of the following code block into the file:
+
+    ```config
+    server:
+    # If no logfile is specified, syslog is used
+    # logfile: "/var/log/unbound/unbound.log"
+    verbosity: 0
+
+    interface: 127.0.0.1
+    port: 5335
+    do-ip4: yes
+    do-udp: yes
+    do-tcp: yes
+
+    # May be set to yes if you have IPv6 connectivity
+    do-ip6: no
+
+    # You want to leave this to no unless you have *native* IPv6. With 6to4 and
+    # Terredo tunnels your web browser should favor IPv4 for the same reasons
+    prefer-ip6: no
+
+    # Use this only when you downloaded the list of primary root servers!
+    # If you use the default dns-root-data package, unbound will find it automatically
+    #root-hints: "/var/lib/unbound/root.hints"
+
+    # Trust glue only if it is within the server's authority
+    harden-glue: yes
+
+    # Require DNSSEC data for trust-anchored zones, if such data is absent, the zone becomes BOGUS
+    harden-dnssec-stripped: yes
+
+    # Don't use Capitalization randomization as it known to cause DNSSEC issues sometimes
+    # see https://discourse.pi-hole.net/t/unbound-stubby-or-dnscrypt-proxy/9378 for further details
+    use-caps-for-id: no
+
+    # Reduce EDNS reassembly buffer size.
+    # Suggested by the unbound man page to reduce fragmentation reassembly problems
+    edns-buffer-size: 1472
+
+    # Perform prefetching of close to expired message cache entries
+    # This only applies to domains that have been frequently queried
+    prefetch: yes
+
+    # One thread should be sufficient, can be increased on beefy machines. In reality for most users running on small networks or on a single machine, it should be unnecessary to seek performance enhancement by increasing num-threads above 1.
+    num-threads: 1
+
+    # Ensure kernel buffer is large enough to not lose messages in traffic spikes
+    so-rcvbuf: 1m
+
+    # Ensure privacy of local IP ranges
+    private-address: 192.168.0.0/16
+    private-address: 169.254.0.0/16
+    private-address: 172.16.0.0/12
+    private-address: 10.0.0.0/8
+    private-address: fd00::/8
+    private-address: fe80::/10
+    ```
+
+    ![](/assets/images/Unbound_Config_File.png)
+
+7. Close and save the file.
+
+8. Restart unbound to apply changes:
+
+    ```bash
+    sudo service unbound restart
+    ```
+
+9. You can test if it is working using the following command:
+
+    ```bash
+    dig pi-hole.net @127.0.0.1 -p 5335 
+    ```
+
+![](/assets/images/Unbound_Dig_test.png)
+
+### PiHole Web UI
+
+1. Go to the Settings section, then the DNS tab.
+
+2. Untick all of the DNS Servers in the left columns.
+
+3. Tick the Custom 1 Server and enter the following IP: `127.0.0.1#5335`
+
+    ![](/assets/images/PiHole_DNS.png)
+
+4. Scroll to the bottom and click Save.
 
 **OPTIONAL**: You can enable DNSSEC to validate that DNS queries are legitimate, but it is not required.
 
@@ -160,9 +413,9 @@ Open the configuration using the following command: sudo nano /etc/unbound/unbou
 
 I hope that this tutorial is useful and easy to follow, and of course if you have any feedback or have a problem, please leave a comment or contact me on Facebook.
 
-As I think this is the right group of people to ask, if anyone knows of a way to monetise this site without using intrusive ads, please send me an email at contact@crankshafttech.com with your suggestions.
+As I think this is the right group of people to ask, if anyone knows of a way to monetise this site without using intrusive ads, please send me an email at [contact@crankshafttech.com](<mailto:contact@crankshafttech.com)>)with your suggestions.
 
-If you liked this tutorial, you can find all my other tutorials [here](https://blog.crankshafttech.com/search/label/Tutorials), and also through the tags below.
+If you liked this tutorial, you can find all my other tutorials [here](/tags/tutorials/), and also through the tags below.
 
 more
 

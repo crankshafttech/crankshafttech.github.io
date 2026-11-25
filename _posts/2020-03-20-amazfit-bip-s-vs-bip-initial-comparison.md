@@ -13,7 +13,6 @@ redirect_from:
 Today, my Amazfit Bip S arrived in the mail from Kogan. I ordered it for AU$101.99 around 2 weeks ago.
 
 ![](/assets/images/IMG_20200320_103154.jpg)
-
 _Amazfit Bip S Box from the Front_
 
 Once I opened the box up, the first thing that stood out to me was how similar it is to the original Bip.
@@ -21,7 +20,6 @@ Once I opened the box up, the first thing that stood out to me was how similar i
 After I put them side-by-side though, I discovered that the screens are the same size, but the plastic bezel around the edge of the glass on the Bip S is wider. Also, the glass is less rounded at the edges, hopefully making it less likely to be scratched.
 
 ![](/assets/images/IMG_20200320_115732.jpg)
-
 _Bip (Left) vs Bip S (Right)_
 
 This makes the watch slightly larger, but you can't tell the difference unless they are side-by-side.
@@ -29,13 +27,11 @@ This makes the watch slightly larger, but you can't tell the difference unless t
 Also, the Bip S uses a slightly different charger which is smaller.
 
 ![](/assets/images/IMG_20200320_122715.jpg)
-
 _Bip S (Left) vs Bip (Right) chargers_
 
 The charger is to accommodate the larger heart-rate sensor on the back, which also has PPG functionality.
 
 ![](/assets/images/IMG_20200320_122557__01.jpg)
-
 _Heart Rate Sensor on the Bip S_
 
 The software experience on the Bip S was surprisingly better than on the Bip. The animations are smoother, the layout of the menus is slightly different, but all-in-all it is a huge improvement. 
@@ -44,6 +40,6 @@ Once it goes on sale globally this won't be much of an issue, but at the time of
 
 I have only been using it for a few hours, but here are my initial findings. In a few days I hope to post an update with more information as I discover it, including testing the GPS and heart rate accuracy, as well as the swim tracking.
 
-If you would like to see any updates I post on this watch, you can find them [here](https://blog.crankshafttech.com/search/label/Bip%20S).
+If you would like to see any updates I post on this watch, you can find them [here](/tags/bip-s/).
 
-If you want to read some of my other reviews, you can find them [here](https://blog.crankshafttech.com/search/label/Reviews).
+If you want to read some of my other reviews, you can find them [here](/tags/reviews/).

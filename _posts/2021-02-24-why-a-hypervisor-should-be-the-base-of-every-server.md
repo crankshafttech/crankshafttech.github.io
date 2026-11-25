@@ -13,7 +13,8 @@ Hypervisors allow for many virtual systems to be run on one physical device or c
 
 This post strays from what I usually post about to discuss some of the benefits that every IT person who has their own system running 24/7 should make use of, and why I plan to virtualise my servers.
 
-[![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-7CAXKJdhO8A%2FW4Qn8wAxInI%2FAAAAAAAABOY%2F471lE8MeWR4OC9dTqz6bsNk0jdXzQhbogCLcBGAs%2Fs1600%2Flogo_vmware_esxil.png&f=1&nofb=1)](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-7CAXKJdhO8A%2FW4Qn8wAxInI%2FAAAAAAAABOY%2F471lE8MeWR4OC9dTqz6bsNk0jdXzQhbogCLcBGAs%2Fs1600%2Flogo_vmware_esxil.png&f=1&nofb=1)
+![](/assets/images/logo_vmware_esxil-1542645882.png){: width="200" height="300" }
+
 
 Throughout this post I will be using examples of features from VMWare Hypervisor, also known as ESXi. This is due to a number of reasons, mainly:
 
@@ -57,7 +58,24 @@ Please note that this approach is not recommended in high stakes environments, b
 
 ## 3. Scheduling of Management Tasks
 
-Another useful feature is the ability to schedule tasks to be run at different times on the hypervisor. Paired with #2, this can allow for [automated snapshots of VMs](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenterhost.doc/GUID-03B90638-6C70-4379-8CAF-D66866D115F4.html) so that you are always prepared for the worst. As well as scheduling snapshots, other tasks can also be automated, such as [turning VMs on and off or changing available resources.](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenterhost.doc/GUID-F9DC9B18-625E-4ACB-AA3A-17BEB109A206.html) These tasks can be scheduled to run at various different times, such as after booting, hourly, or anywhere up to monthly. 4. Power SavingsThis point mainly applies to people that have multiple servers running that don't each require much processing power. Bundling them into one physical device makes management easier through one UI, as well as reducing power usage by more effectively utilising every watt instead of generating more waste heat and noise per application. It also has the added effect of requiring less hardware, therefore being cheaper to purchase and maintain, as well as being better for the environment by using less non-recyclable resources that are sent to landfill at the end of their life. 5. Migration Between Physical SystemsThe last major advantage of using a hypervisor is the ability to easily transfer a working system between different physical machines without having to make sure the hardware is compatible. As long as the hypervisor runs fine on the new hardware, the VM will too. This is achieved through the fact that all of the VM data is saved in files in the datastore that can be easily exported and imported into the new system's hypervisor. Once it is transferred, it will just boot up like normal, not even noticing the change in hardware. Of course there are exceptions, but they are not very common and this is still far more seamless then transferring bare metal systems to new hardware.
-SummaryBased on these findings, I plan to make a follow up to this post to move my [OpenMediaVault NAS](https://www.openmediavault.org/), [Docker](https://www.docker.com/) containers and [PiHole](https://blog.crankshafttech.com/2019/12/set-up-pihole-with-doh-and-pivpn.html) to a virtualised environment, utilising many of the features listed above. 
-If there are any other benefits to a hypervisor I didn't list or major disadvantages, let me know in the comments below. If you liked this new style of content, let me know by leaving a comment, reaction or sharing it with your friends. If you liked this topic, you can find all my Server and Networking content [here](https://blog.crankshafttech.com/search/label/Servers%20and%20Networking). 
+Another useful feature is the ability to schedule tasks to be run at different times on the hypervisor.
+
+Paired with #2, this can allow for [automated snapshots of VMs](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenterhost.doc/GUID-03B90638-6C70-4379-8CAF-D66866D115F4.html) so that you are always prepared for the worst. As well as scheduling snapshots, other tasks can also be automated, such as [turning VMs on and off or changing available resources.](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vcenterhost.doc/GUID-F9DC9B18-625E-4ACB-AA3A-17BEB109A206.html)
+
+These tasks can be scheduled to run at various different times, such as after booting, hourly, or anywhere up to monthly. 
+
+## 4. Power Savings
+
+This point mainly applies to people that have multiple servers running that don't each require much processing power. Bundling them into one physical device makes management easier through one UI, as well as reducing power usage by more effectively utilising every watt instead of generating more waste heat and noise per application. It also has the added effect of requiring less hardware, therefore being cheaper to purchase and maintain, as well as being better for the environment by using less non-recyclable resources that are sent to landfill at the end of their life.
+
+## 5. Migration Between Physical Systems
+
+The last major advantage of using a hypervisor is the ability to easily transfer a working system between different physical machines without having to make sure the hardware is compatible. As long as the hypervisor runs fine on the new hardware, the VM will too. This is achieved through the fact that all of the VM data is saved in files in the datastore that can be easily exported and imported into the new system's hypervisor. Once it is transferred, it will just boot up like normal, not even noticing the change in hardware. Of course there are exceptions, but they are not very common and this is still far more seamless then transferring bare metal systems to new hardware.
+
+# Summary
+
+Based on these findings, I plan to make a follow up to this post to move my [OpenMediaVault NAS](https://www.openmediavault.org/), [Docker](https://www.docker.com/) containers and [PiHole](/posts/how-to-set-up-a-pihole-with-pivpn-and-dns-over-https/) to a virtualised environment, utilising many of the features listed above.
+
+If there are any other benefits to a hypervisor I didn't list or major disadvantages, let me know in the comments below. If you liked this new style of content, let me know by leaving a comment, reaction or sharing it with your friends. If you liked this topic, you can find all my Server and Networking content [here](/tags/servers-and-networking/).
+
 EDIT #1: Added the ESXi logo

@@ -12,4 +12,4 @@ As I was looking through my Scratch files today, I noticed one from April last y
 
 Please leave a comment if you have any feedback or questions.
 
-The other updates for Crankshaft Technology can be found [here](https://blog.crankshafttech.com/search/label/Crankshaft%20Technology)
+The other updates for Crankshaft Technology can be found [here](/tags/crankshaft-technology/)

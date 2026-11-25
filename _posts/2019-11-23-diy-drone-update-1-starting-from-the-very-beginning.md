@@ -37,13 +37,11 @@ Battery: [Link](https://hobbyking.com/en_us/turnigy-graphene-panther-1500mah-3s-
 This is most of the stuff I needed to get started. I also needed a battery charger ([Link](https://www.ebay.com.au/itm/iMax-B6AC-80W-RC-Lipo-Lithium-NiMh-Digital-Battery-Balance-Charger-Discharger-M3/283511686408?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649)) and a power supply for the charger, which I made out of an old desktop power supply (PSU). To plug the battery into the charger, I needed a special cable ([Link](https://www.ebay.com.au/itm/14AWG-Male-Banana-Connector-To-XT60-Plug-Male-Wire-Adapter-Cable-Converter-DR/392274070730?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649)). I also needed a cable to plug the battery into the flight controller ([Link](https://hobbyking.com/en_us/xt60-male-w-12awg-silicon-wire-10cm-5pcs-bag.html))
 
 ![](/assets/images/IMG_20191123_150925.jpg)
-
 _The DIY Power Supply and Charger (not as dangerous as you think)_
 
 I first received the flight controller, frame, VTX and camera, which I assembled by soldering the wires to the flight controller and VTX. I then plugged it into my laptop, turned on my headset and checked to see if it was transmitting video. Once I found the right channel, I got an image. Then, I opened Betaflight Configurator ([Link](https://github.com/betaflight/betaflight-configurator)) and added some more information to the On Screen Display (OSD), which allowed me to see altitude, speed, direction and battery voltage.
 
 ![](/assets/images/Betaflight_Configurator.png)
-
 _Betaflight Configurator_
 
 As of writing, I have received all the parts except for the replacement for my broken motor.
@@ -52,4 +50,4 @@ New posts will be written as parts arrive and are assembled.
 
 Please leave a comment if you have any feedback or questions.
 
-My other personal updates can be found [here](https://blog.crankshafttech.com/search/label/Personal%20Update), and DIY Drone updates can be found [here](https://blog.crankshafttech.com/search/label/DIY%20Drone).
+My other personal updates can be found [here](/tags/personal-update/), and DIY Drone updates can be found [here](/tags/diy-drone/).

@@ -7,6 +7,8 @@ gem "jekyll-theme-chirpy", "~> 7.6"
 #allows links from old Blogger site to continue working
 gem 'jekyll-redirect-from'
 
+gem "github-pages", group: :jekyll_plugins
+
 gem 'jekyll-compose', group: [:jekyll_plugins]
 
 gem "html-proofer", "~> 5.0", group: :test

@@ -1,0 +1,8 @@
+{
+	"name": "blog",
+	// Set this to today's date
+	"compatibility_date": "2026-11-28",
+	"assets": {
+		"directory": "./_site"
+	}
+}
